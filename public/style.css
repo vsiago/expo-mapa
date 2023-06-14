@@ -46,7 +46,7 @@ ul {
 }
 
 li {
-  margin-bottom: 0.5rem;
+  list-style: none;
 }
 
 label {
@@ -102,6 +102,11 @@ button:disabled {
 hr {
   border: 2px solid black;
   margin: 2rem auto;
+}
+
+a {
+  text-decoration: none;
+  color: #ccc;
 }
 
 /* animacao suave */

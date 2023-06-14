@@ -1,14 +1,13 @@
 /* HEADER */
-
 .header {
-  background: #314350;
+  background: radial-gradient(59.36% 3107.35% at 49.08% -51.8%, #215CB1 0%, #1A4277 49.5%, #142473 100%) /* warning: gradient uses a rotation that is not supported by CSS and may not behave as expected */;
   width: 100vw;
   height: 20px;
   position: relative;
   /* top: -150px; */
   transition: .6s cubic-bezier(.18,.89,.32,1.28);
-  cursor: pointer;
 }
+
 .header .navbar {
   display: flex;
   justify-content: center;
@@ -19,6 +18,11 @@
   top: 0;
   width: 100%;
   position: relative;
+}
+
+.header .navbar li a {
+  display: block;
+  padding: 1rem;
 }
 
 /* Logos config */
@@ -37,6 +41,13 @@
   opacity: 0;
   visibility: hidden;
   transition: .2s;
+}
+
+/* Btn Navbar */
+.btn-navbar svg{ 
+  width: 100%;
+  margin-top: -30px;
+  cursor: pointer;
 }
 
 /* Animacao */
