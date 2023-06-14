@@ -1,0 +1,53 @@
+/* HEADER */
+
+.header {
+  background: #314350;
+  width: 100vw;
+  height: 20px;
+  position: relative;
+  /* top: -150px; */
+  transition: .6s cubic-bezier(.18,.89,.32,1.28);
+  cursor: pointer;
+}
+.header .navbar {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  padding: 0 2.5rem;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  position: relative;
+}
+
+/* Logos config */
+.logo-expo, .logo-prefeitura {
+  position: fixed;
+  top: 20px;
+}
+
+.logo-expo {
+  left: 40px;
+}
+
+.logo-prefeitura {
+  right: 40px;
+  top: 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: .2s;
+}
+
+/* Animacao */
+.logoToggle {
+  top: 35px;
+  opacity: 1;
+  visibility: visible;
+  transition: .5s;
+}
+
+.open {
+  /* top: 0; */
+  height: 200px;
+}
