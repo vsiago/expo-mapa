@@ -1,9 +1,82 @@
 .avaliacao-container {
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column;
+  max-height: 100vh;
+  width: 100%;
+  display: grid;
+  grid-template-rows: 1fr 2fr 100px;
   color: #eee;
-  background-color: #111;
+  background-color: #142432;
+  text-align: center;
+  position: relative;
+}
+
+.logoExpo {
+  margin-top: 35px;
+}
+
+.avaliacao-container .titleOpiniao {
+  font-size: 3.2rem;
+  margin-top: 15px;
+}
+
+.avaliacao-container .subTitleOpniao {
+  font-size: 1.7rem;
+  font-weight: 300;
+}
+
+header {
+  width: 100%;
+  position: relative;
+  /* border: solid 3px green; */
+}
+
+.btnEnviarAvaliacao {
+  background: #52BD5D;
+  width: 400px;
+  height: 60px;
+  color: white;
+
+}
+
+.scLogos {
+  width: 400px;
+}
+
+.btnVoltar {
+  width: 80px;
+  position: absolute;
+  right: 160px;
+  top: 60px;
+  opacity: .5;
+  cursor: pointer;
+}
+
+section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /* border: solid 3px red; */
+}
+
+/* Cards Config */
+section .cardsAvaliacao {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+  width: 100%;
+  height: 100%;
+  gap: 10px;
+  padding: 20px 10rem;
+  /* background-color: red; */
+}
+
+.card {
+  width: 100%;
+  height: 100%;
+  background: #121A22;
+  border-radius: 15px;
+}
+
+footer { 
+  /* border: solid 3px orange; */
+  width: 100%;
 }
