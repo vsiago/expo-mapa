@@ -56,7 +56,7 @@ export default function Header() {
         </ul>
         <img
           className={`logo-prefeitura ${logoShow ? 'logoToggle' : ''}`}
-          src="./img/logo-prefeitura.svg"
+          src="./img/logo-expo-2023-escura.png"
           alt="Logo Prefeitura 2023"
         />
       </nav>
@@ -103,6 +103,11 @@ export default function Header() {
             </radialGradient>
           </defs>
         </svg>
+        <img
+          className={`iconArrowDown ${navbarShow ? 'iconArrowUp' : ''}`}
+          src="../img/double-arrow-down.png"
+          alt=""
+        />
       </div>
     </header>
   );
