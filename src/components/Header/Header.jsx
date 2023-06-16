@@ -31,7 +31,7 @@ export default function Header() {
   };
 
   return (
-    <header>
+    <header className='headerMain'>
       <nav className={`header ${isOpen ? 'open' : ''}`}>
         <img
           className="logo-expo"

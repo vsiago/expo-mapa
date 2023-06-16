@@ -7,7 +7,7 @@
   background-color: #ccc;
 }
 
-header {
+.headerMain {
   position: fixed!important;
   z-index: 1000;
 }
