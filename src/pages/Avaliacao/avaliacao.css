@@ -2,7 +2,7 @@
   max-height: 100vh;
   width: 100%;
   display: grid;
-  grid-template-rows: 1fr 2fr 100px;
+  grid-template-rows: 1fr 3fr 100px;
   color: #eee;
   background-color: #142432;
   text-align: center;
@@ -10,12 +10,12 @@
 }
 
 .logoExpo {
-  margin-top: 35px;
+  margin-top: 30px;
 }
 
 .avaliacao-container .titleOpiniao {
   font-size: 3.2rem;
-  margin-top: 15px;
+  font-weight: 500;
 }
 
 .avaliacao-container .subTitleOpniao {
@@ -32,7 +32,7 @@ header {
 .btnEnviarAvaliacao {
   background: #52BD5D;
   width: 400px;
-  height: 60px;
+  height: 70px;
   color: white;
 
 }
@@ -42,10 +42,10 @@ header {
 }
 
 .btnVoltar {
-  width: 80px;
+  width: 75px;
   position: absolute;
   right: 160px;
-  top: 60px;
+  top: 40px;
   opacity: .5;
   cursor: pointer;
 }
@@ -54,6 +54,8 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-bottom: 2rem;
+  padding-top: 1rem;
   /* border: solid 3px red; */
 }
 

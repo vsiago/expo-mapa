@@ -3,6 +3,7 @@ import './avaliacao.css';
 import { Link } from 'react-router-dom';
 import { useState } from 'react';
 import buttonClickSound from '/sound/ui_tap-variant-01.wav';
+import Card from '../../components/Cards/Card';
 
 export default function Avaliacao() {
   const [audio] = useState(new Audio(buttonClickSound));
@@ -19,7 +20,7 @@ export default function Avaliacao() {
           <img
             className="logoExpo"
             src="./img/logo-expo-2023.svg"
-            width={200}
+            width={180}
             alt="Logo Expo 2023"
           />
         </h1>
@@ -38,7 +39,9 @@ export default function Avaliacao() {
       </header>
       <section>
         <div className="cardsAvaliacao">
-          <div className="cardSeguraca card"></div>
+          <div className="cardSeguraca card">
+            <Card />
+          </div>
           <div className="cardAlimentacao card"></div>
           <div className="cardOrganizacao card"></div>
           <div className="cardAtracao card"></div>

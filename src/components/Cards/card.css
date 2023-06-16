@@ -1,0 +1,28 @@
+.cardContainer {
+  width: 100%;
+  height: 100%;
+  display: grid;
+  grid-template-rows: 40px 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.icon {
+  border: solid 1px green;
+  width: 100%;
+  height: 100%;
+}
+
+.titleCardContainer{
+  border: solid 1px red;
+  padding: 0;
+  margin: 0;
+  grid-column: 1/6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.titleCardContainer h3 {
+  font-weight: 500;
+  font-size: 1.5rem;
+}
