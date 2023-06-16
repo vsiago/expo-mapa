@@ -40,19 +40,19 @@ export default function Header() {
         />
         <ul className={`navbar ${navbarShow ? 'navbarShow' : ''}`}>
           <li>
-            <a href="">Rodeio</a>
+            <a>Rodeio</a>
           </li>
           <li>
-            <a href="">Parque</a>
+            <a>Parque</a>
           </li>
           <li>
-            <a href="">Praca de Alimentacao</a>
+            <a>Praca de Alimentacao</a>
           </li>
           <li>
-            <a href="">Shows</a>
+            <a>Shows</a>
           </li>
           <li>
-            <a href="">Bem-estar</a>
+            <a>Bem-estar</a>
           </li>
           <Link to="/avaliacao">
             <img

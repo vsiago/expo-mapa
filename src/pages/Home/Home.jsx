@@ -1,5 +1,7 @@
 import React, { useEffect, useState } from 'react';
-import Header from '../../components/Header';
+import Header from '../../components/Header/Header';
+import Mapa from '../../components/Mapa/Mapa';
+
 import './home.css';
 
 const Home = () => {
@@ -11,6 +13,7 @@ const Home = () => {
   return (
     <div className="home-container">
       <Header />
+      <Mapa />
     </div>
   );
 };

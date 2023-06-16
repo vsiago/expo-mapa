@@ -6,3 +6,7 @@
   flex-direction: column;
   background-color: #ccc;
 }
+
+header {
+  position: fixed;
+}
