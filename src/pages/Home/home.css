@@ -8,5 +8,10 @@
 }
 
 header {
-  position: fixed;
+  position: fixed!important;
+  z-index: 1000;
+}
+
+::-webkit-scrollbar {
+  width: 0px;
 }
