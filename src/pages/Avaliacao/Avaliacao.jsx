@@ -1,8 +1,17 @@
 import React from 'react';
 import './avaliacao.css';
 import { Link } from 'react-router-dom';
+import { useState } from 'react';
+import buttonClickSound from '/sound/ui_tap-variant-01.wav';
 
 export default function Avaliacao() {
+  const [audio] = useState(new Audio(buttonClickSound));
+
+  const handleButtonClick = () => {
+    audio.play();
+    // Outras ações quando o botão é clicado
+  };
+
   return (
     <main className="avaliacao-container">
       <header>
@@ -19,7 +28,12 @@ export default function Avaliacao() {
           Sua resposta é muito importante para nós
         </p>
         <Link to="/home">
-          <img className="btnVoltar" src="./img/btnVoltar.png" alt="" />
+          <img
+            onClick={handleButtonClick}
+            className="btnVoltar"
+            src="./img/btnVoltar.png"
+            alt=""
+          />
         </Link>
       </header>
       <section>

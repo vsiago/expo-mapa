@@ -2,16 +2,19 @@ import React from 'react';
 import { useState } from 'react';
 import './header.css';
 import { Link } from 'react-router-dom';
+import buttonClickSound from '/sound/ui_tap-variant-01.wav';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const [logoShow, setLogoHidden] = useState(true);
   const [navbarShow, setNavbarShow] = useState(false);
+  const [audio] = useState(new Audio(buttonClickSound));
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
     toggleLogoHidden();
     ToggleNavbar();
+    handleButtonClick();
   };
 
   const toggleLogoHidden = () => {
@@ -20,6 +23,11 @@ export default function Header() {
 
   const ToggleNavbar = () => {
     setNavbarShow(!navbarShow);
+  };
+
+  const handleButtonClick = () => {
+    audio.play();
+    // Outras ações quando o botão é clicado
   };
 
   return (
@@ -48,6 +56,7 @@ export default function Header() {
           </li>
           <Link to="/avaliacao">
             <img
+              onClick={handleButtonClick}
               className="btnAvaliacao"
               src="./img/btnAvaliacao.png"
               alt="Botao Avaliacao"
