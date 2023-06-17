@@ -8,23 +8,23 @@ export default function Card({ TipoDeArea }) {
         <h3>{TipoDeArea}</h3>
       </div>
       <div className="icon">
-        <img src="./img/iconsCaras/muitoRuimIcon.png" alt="" width={100} />
+        <img src="./img/iconsCaras/muitoRuimIcon.png" alt="" />
         <p>Muito ruim</p>
       </div>
       <div className="icon">
-        <img src="./img/iconsCaras/ruimIcon.png" alt="" width={100} />
+        <img src="./img/iconsCaras/ruimIcon.png" alt="" />
         <p>Ruim</p>
       </div>
       <div className="icon">
-        <img src="./img/iconsCaras/razoavelIcon.png" alt="" width={100} />
+        <img src="./img/iconsCaras/razoavelIcon.png" alt="" />
         <p>Razoável</p>
       </div>
       <div className="icon">
-        <img src="./img/iconsCaras/bomIcon.png" alt="" width={100} />
+        <img src="./img/iconsCaras/bomIcon.png" alt="" />
         <p>Bom</p>
       </div>
       <div className="icon">
-        <img src="./img/iconsCaras/muitoBomIcon.png" alt="" width={100} />
+        <img src="./img/iconsCaras/muitoBomIcon.png" alt="" />
         <p>Muito bom</p>
       </div>
     </div>

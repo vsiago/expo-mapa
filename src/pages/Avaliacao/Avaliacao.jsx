@@ -20,7 +20,6 @@ export default function Avaliacao() {
           <img
             className="logoExpo"
             src="./img/logo-expo-2023.svg"
-            width={180}
             alt="Logo Expo 2023"
           />
         </h1>
@@ -40,7 +39,7 @@ export default function Avaliacao() {
       <section>
         <div className="cardsAvaliacao">
           <div className="cardSeguraca card">
-            <Card TipoDeArea={'Segurança'}/>
+            <Card TipoDeArea={'Segurança'} />
           </div>
           <div className="cardAlimentacao card">
             <Card TipoDeArea={'Alimentação'} />

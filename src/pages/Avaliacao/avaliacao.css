@@ -10,7 +10,7 @@
 }
 
 .logoExpo {
-  margin-top: 30px;
+  margin-top: 25px;
 }
 
 .avaliacao-container .titleOpiniao {
@@ -32,7 +32,7 @@ header {
 .btnEnviarAvaliacao {
   background: #3B9C45;
   width: 450px;
-  height: 100px;
+  height: 75px;
   color: white;
   font-size: 1.8rem;
   font-weight: 500;
@@ -40,7 +40,7 @@ header {
 }
 
 .scLogos {
-  width: 400px;
+  width: 350px;
 }
 
 .btnVoltar {
@@ -56,8 +56,6 @@ section {
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-bottom: 2rem;
-  padding-top: 1rem;
   /* border: solid 3px red; */
 }
 
@@ -82,4 +80,7 @@ section .cardsAvaliacao {
 footer { 
   /* border: solid 3px orange; */
   width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
