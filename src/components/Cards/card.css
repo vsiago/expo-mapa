@@ -47,3 +47,21 @@
   font-size: 1.rem;
   font-weight: 600;
 }
+
+/********** Botoes Carinhas ativos  ***********/
+
+.muitoRuimActive {
+  box-shadow: 0px 0px 30px 2px #FD645F;
+  border-radius: 100%;
+  transition: .3s;
+}
+
+.iconRuimActive {
+  width: 110%!important;
+}
+
+.TextRuimActive {
+  color:#FD645F;
+  font-weight: bold;
+  transition: .3s;
+}
