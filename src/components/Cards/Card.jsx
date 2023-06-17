@@ -1,11 +1,11 @@
 import React from 'react';
 import './card.css';
 
-export default function Card() {
+export default function Card({ TipoDeArea }) {
   return (
     <div className="cardContainer">
       <div className="titleCardContainer">
-        <h3>Segurança</h3>
+        <h3>{TipoDeArea}</h3>
       </div>
       <div className="icon">
         <img src="./img/iconsCaras/muitoRuimIcon.png" alt="" width={100} />

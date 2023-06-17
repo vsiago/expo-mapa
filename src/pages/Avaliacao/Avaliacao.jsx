@@ -40,16 +40,16 @@ export default function Avaliacao() {
       <section>
         <div className="cardsAvaliacao">
           <div className="cardSeguraca card">
-            <Card />
+            <Card TipoDeArea={'Segurança'}/>
           </div>
           <div className="cardAlimentacao card">
-            <Card />
+            <Card TipoDeArea={'Alimentação'} />
           </div>
           <div className="cardOrganizacao card">
-            <Card />
+            <Card TipoDeArea={'Organização'} />
           </div>
           <div className="cardAtracao card">
-            <Card />
+            <Card TipoDeArea={'Atrações'} />
           </div>
         </div>
         <button className="btnEnviarAvaliacao">Enviar avaliação</button>
