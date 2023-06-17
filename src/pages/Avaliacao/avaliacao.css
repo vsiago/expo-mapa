@@ -1,5 +1,5 @@
 .avaliacao-container {
-  min-height: 100vh;
+  max-height: 100vh;
   width: 100%;
   display: grid;
   grid-template-rows: 1fr 3fr 100px;
