@@ -31,7 +31,8 @@
 
 .header .navbar li a {
   display: block;
-  padding: 1rem;
+  padding: 1.5rem;
+  font-size: 1.5rem;
 }
 
 /* Logos config */
@@ -80,6 +81,7 @@
   width: 25px;
   position: absolute;
   transition: .4s;
+  cursor: pointer;
 }
 
 /* Animacao */

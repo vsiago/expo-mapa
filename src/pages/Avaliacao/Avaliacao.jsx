@@ -42,9 +42,15 @@ export default function Avaliacao() {
           <div className="cardSeguraca card">
             <Card />
           </div>
-          <div className="cardAlimentacao card"></div>
-          <div className="cardOrganizacao card"></div>
-          <div className="cardAtracao card"></div>
+          <div className="cardAlimentacao card">
+            <Card />
+          </div>
+          <div className="cardOrganizacao card">
+            <Card />
+          </div>
+          <div className="cardAtracao card">
+            <Card />
+          </div>
         </div>
         <button className="btnEnviarAvaliacao">Enviar avaliação</button>
       </section>
