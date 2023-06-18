@@ -74,7 +74,7 @@
 
 .borderMuitoRuim {
   border: solid 3px rgba(253, 86, 85, .4);
-  transition: .3s ease-out;
+  transition: .6s ease-out;
 }
 
 /* Ruim Config */
@@ -97,7 +97,7 @@
 
 .borderRuim {
   border: solid 3px rgba(253, 165, 44, .4);
-  transition: .3s ease-out;
+  transition: .6s ease-out;
 }
 
 /* Razoavel Config */
@@ -120,7 +120,7 @@
 
 .borderRazoavel {
   border: solid 3px rgba(255, 223, 84, .4);
-  transition: .3s ease-out;
+  transition: .6s ease-out;
 }
 
 /* Bom Config */
@@ -143,7 +143,7 @@
 
 .borderBom {
   border: solid 3px rgba(86, 233, 72, .4);
-  transition: .3s ease-out;
+  transition: .6s ease-out;
 }
 
 /* Muito Bom Config */
@@ -165,5 +165,5 @@
 }
 .borderMuitoBom {
   border: solid 3px rgba(75, 196, 38, .4);
-  transition: .3s ease-out;
+  transition: .6s ease-out;
 }
