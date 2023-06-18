@@ -22,6 +22,7 @@
   flex-direction: column;
   gap: 5px;
   cursor: pointer;
+  opacity: .7;
 }
 
 .icon img {
@@ -29,7 +30,8 @@
 }
 
 .icon p {
-  font-size: 1rem;
+  font-size: 1.1rem;
+  margin-top: 5px;
 }
 
 .titleCardContainer{
@@ -50,18 +52,93 @@
 
 /********** Botoes Carinhas ativos  ***********/
 
+/* Muito Ruim Config */
+.muitoRuimShow {
+  opacity: 1;
+}
+
 .muitoRuimActive {
   box-shadow: 0px 0px 30px 2px #FD645F;
   border-radius: 100%;
-  transition: .3s;
+  transition: .3s ease-out;
 }
-
-.iconRuimActive {
-  width: 110%!important;
+.iconMuitoRuimActive {
+  /* width: 110%!important; */
 }
-
-.TextRuimActive {
+.TextMuitoRuimActive {
   color:#FD645F;
   font-weight: bold;
-  transition: .3s;
+  transition: .3s ease-out;
+}
+
+/* Ruim Config */
+.ruimShow {
+  opacity: 1;
+}
+.ruimActive {
+  box-shadow: 0px 0px 30px 2px #FC9A29;
+  border-radius: 100%;
+  transition: .3s ease-out;
+}
+.iconRuimActive {
+  /* width: 110%!important; */
+}
+.TextRuimActive {
+  color:#FC9A29;
+  font-weight: bold;
+  transition: .3s ease-out;
+}
+
+/* Razoavel Config */
+.razoavelShow {
+  opacity: 1;
+}
+.razoavelActive {
+  box-shadow: 0px 0px 30px 2px #FFE357;
+  border-radius: 100%;
+  transition: .3s ease-out;
+}
+.iconRazoavelActive {
+  /* width: 110%!important; */
+}
+.TextRazoavelActive {
+  color:#FFE357;
+  font-weight: bold;
+  transition: .3s ease-out;
+}
+
+/* Bom Config */
+.bomShow {
+  opacity: 1;
+}
+.bomActive {
+  box-shadow: 0px 0px 35px 2px #55E241;
+  border-radius: 100%;
+  transition: .3s ease-out;
+}
+.iconBomActive {
+  /* width: 110%!important; */
+}
+.TextBomActive {
+  color:#55E241;
+  font-weight: bold;
+  transition: .3s ease-out;
+}
+
+/* Muito Bom Config */
+.muitoBomShow {
+  opacity: 1;
+}
+.muitoBomActive {
+  box-shadow: 0px 0px 35px 2px #43BC27;
+  border-radius: 100%;
+  transition: .3s ease-out;
+}
+.iconMuitoBomActive {
+  /* width: 110%!important; */
+}
+.TextMuitoBomActive {
+  color:#43BC27;
+  font-weight: bold;
+  transition: .3s ease-out;
 }

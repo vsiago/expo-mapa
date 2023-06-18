@@ -15,34 +15,92 @@ export default function Card({ TipoDeArea }) {
         <h3>{TipoDeArea}</h3>
       </div>
 
-      <div onClick={() => handleButtonClick('muitoRuim')} className="icon">
+      <div
+        onClick={() => handleButtonClick('muitoRuim')}
+        className={`icon ${
+          activeButton === 'muitoRuim' ? 'muitoRuimShow' : ''
+        }`}
+      >
         <img
           className={
-            activeButton === 'muitoRuim' ? 'muitoRuimActive iconRuimActive' : ''
+            activeButton === 'muitoRuim'
+              ? 'muitoRuimActive iconMuitoRuimActive'
+              : ''
           }
           src="./img/iconsCaras/muitoRuimIcon.png"
           alt=""
         />
-        <p className={activeButton === 'muitoRuim' ? 'TextRuimActive' : ''}>
+        <p
+          className={activeButton === 'muitoRuim' ? 'TextMuitoRuimActive' : ''}
+        >
           Muito ruim
         </p>
       </div>
 
-      <div className="icon">
-        <img src="./img/iconsCaras/ruimIcon.png" alt="" />
-        <p>Ruim</p>
+      <div
+        onClick={() => handleButtonClick('ruim')}
+        className={`icon ${activeButton === 'ruim' ? 'ruimShow' : ''}`}
+      >
+        <img
+          className={activeButton === 'ruim' ? 'ruimActive iconRuimActive' : ''}
+          src="./img/iconsCaras/ruimIcon.png"
+          alt=""
+        />
+        <p className={activeButton === 'ruim' ? 'TextRuimActive' : ''}>Ruim</p>
       </div>
-      <div className="icon">
-        <img src="./img/iconsCaras/razoavelIcon.png" alt="" />
-        <p>Razoável</p>
+
+      <div
+        onClick={() => {
+          handleButtonClick('razoavel');
+        }}
+        className={`icon ${activeButton === 'razoavel' ? 'razoavelShow' : ''}`}
+      >
+        <img
+          className={
+            activeButton === 'razoavel'
+              ? 'razoavelActive iconRazoavelActive'
+              : ''
+          }
+          src="./img/iconsCaras/razoavelIcon.png"
+          alt=""
+        />
+        <p className={activeButton === 'razoavel' ? 'TextRazoavelActive' : ''}>
+          Razoável
+        </p>
       </div>
-      <div className="icon">
-        <img src="./img/iconsCaras/bomIcon.png" alt="" />
-        <p>Bom</p>
+
+      <div
+        onClick={() => {
+          handleButtonClick('bom');
+        }}
+        className={`icon ${activeButton === 'bom' ? 'bomShow' : ''}`}
+      >
+        <img
+          className={activeButton === 'bom' ? 'bomActive iconBomActive' : ''}
+          src="./img/iconsCaras/bomIcon.png"
+          alt=""
+        />
+        <p className={activeButton === 'bom' ? 'TextBomActive' : ''}>Bom</p>
       </div>
-      <div className="icon">
-        <img src="./img/iconsCaras/muitoBomIcon.png" alt="" />
-        <p>Muito bom</p>
+
+      <div
+        onClick={() => {
+          handleButtonClick('muitoBom');
+        }}
+        className={`icon ${activeButton === 'muitoBom' ? 'muitoBomShow' : ''}`}
+      >
+        <img
+          className={
+            activeButton === 'muitoBom'
+              ? 'muitoBomActive iconMuitoBomActive'
+              : ''
+          }
+          src="./img/iconsCaras/muitoBomIcon.png"
+          alt=""
+        />
+        <p className={activeButton === 'muitoBom' ? 'TextMuitoBomActive' : ''}>
+          Muito bom
+        </p>
       </div>
     </div>
   );
