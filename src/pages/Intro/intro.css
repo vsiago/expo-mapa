@@ -4,5 +4,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  background-color: #314350;
+  background-color: #142432;
+}
+
+.textMapaInterativo {
+  font-size: .9rem;
+  margin-top: 15px;
+  color: #DECC85;
+  letter-spacing: 2px;
+  font-weight: 500;
 }
