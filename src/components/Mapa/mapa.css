@@ -1,6 +1,23 @@
-.leaflet-image-layer {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto !important;
-  height: auto !important;
+
+
+.leaflet-popup-content-wrapper {
+  margin-top: 200px;
+  width: 80vw;
+  min-height: 50vh;
+  height: auto;
+  /* Estilo do contêiner do conteúdo do Popup */
 }
+
+.leaflet-popup-content {
+  /* Estilo do conteúdo do Popup */
+}
+
+.leaflet-popup-tip-container {
+  /* Estilo do contêiner da ponta do Popup */
+}
+
+.leaflet-popup-tip {
+  /* Estilo da ponta do Popup */
+}
+
+/* Personalize outros elementos internos do Popup conforme necessário */

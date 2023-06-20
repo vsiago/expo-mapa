@@ -7,6 +7,15 @@ import {
   useMap,
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
+import './mapa.css';
+import markerIcon from '/img/iconsCaras/bomIcon.png';
+
+import { icon } from 'leaflet';
+
+const customIcon = icon({
+  iconUrl: markerIcon,
+  iconSize: [50, 50], // Defina o tamanho do ícone
+});
 
 const ZoomableImageOverlay = ({
   imageUrl,
@@ -61,8 +70,9 @@ const Map = () => {
           maxZoom={maxZoom}
           initialZoom={initialZoom}
         />
-        <Marker position={pinCoordinates}>
-          <Popup>
+        <Marker position={pinCoordinates} icon={customIcon}>
+          <Popup autoPan={true}>
+            <h1>Oi meu amor</h1>
             <button className="red-button">Botão</button>
           </Popup>
         </Marker>
