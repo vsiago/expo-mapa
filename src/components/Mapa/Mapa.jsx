@@ -26,7 +26,7 @@ const Map = () => {
     [-90, -180],
     [90, 180],
   ]; // Exemplo: limites da imagem do mundo inteiro
-  const minZoom = 2;
+  const minZoom = 3;
   const maxZoom = 4;
   const initialZoom = 1;
   const centerLatitude = 0; // Exemplo: latitude do centro do mapa
