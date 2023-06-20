@@ -31,13 +31,15 @@ export default function Header() {
   };
 
   return (
-    <header className='headerMain'>
+    <header className="headerMain">
       <nav className={`header ${isOpen ? 'open' : ''}`}>
-        <img
-          className="logo-expo"
-          src="./img/logo-expo-2023.svg"
-          alt="Logo Expo 2023"
-        />
+        <Link to="https://expo-mapa.vercel.app">
+          <img
+            className="logo-expo"
+            src="./img/logo-expo-2023.svg"
+            alt="Logo Expo 2023"
+          />
+        </Link>
         <ul className={`navbar ${navbarShow ? 'navbarShow' : ''}`}>
           <li>
             <a>Rodeio</a>
