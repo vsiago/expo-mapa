@@ -1,5 +1,11 @@
 import React, { useEffect } from 'react';
-import { MapContainer, ImageOverlay, useMap } from 'react-leaflet';
+import {
+  MapContainer,
+  ImageOverlay,
+  Marker,
+  Popup,
+  useMap,
+} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 
 const ZoomableImageOverlay = ({
@@ -25,16 +31,18 @@ const Map = () => {
   const imageBounds = [
     [-90, -260],
     [180, 260],
-  ]; // Exemplo: limites da imagem do mundo inteiro
+  ];
   const minZoom = 2;
   const maxZoom = 4;
   const initialZoom = 1;
-  const centerLatitude = 0; // Exemplo: latitude do centro do mapa
-  const centerLongitude = 0; // Exemplo: longitude do centro do mapa
+  const centerLatitude = 0;
+  const centerLongitude = 0;
   const mapMinBounds = [
     [-90, -180],
     [90, 180],
-  ]; // Limites máximos do mapa
+  ];
+
+  const pinCoordinates = ['10.000', '10.000']; // Substitua latitude e longitude pelas coordenadas desejadas
 
   return (
     <div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
@@ -53,6 +61,12 @@ const Map = () => {
           maxZoom={maxZoom}
           initialZoom={initialZoom}
         />
+        <Marker position={pinCoordinates}>
+          <Popup>
+            <h1>oi</h1>
+            <button className="red-button">Botão</button>
+          </Popup>
+        </Marker>
       </MapContainer>
     </div>
   );
