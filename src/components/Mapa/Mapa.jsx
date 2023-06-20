@@ -23,10 +23,10 @@ const ZoomableImageOverlay = ({
 const Map = () => {
   const imageUrl = './img/mapa-expo.png';
   const imageBounds = [
-    [-90, -180],
-    [90, 180],
+    [-90, -260],
+    [180, 260],
   ]; // Exemplo: limites da imagem do mundo inteiro
-  const minZoom = 3;
+  const minZoom = 2;
   const maxZoom = 4;
   const initialZoom = 1;
   const centerLatitude = 0; // Exemplo: latitude do centro do mapa
@@ -45,6 +45,7 @@ const Map = () => {
         maxBounds={mapMinBounds}
         maxBoundsViscosity={1.0}
       >
+        <h1>Ola</h1>
         <ZoomableImageOverlay
           imageUrl={imageUrl}
           imageBounds={imageBounds}
