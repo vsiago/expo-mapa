@@ -1,8 +1,11 @@
 
 
 .leaflet-popup-content-wrapper {
-  margin-top: 200px;
-  width: 80vw;
+  /* position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%); */
+  width: 50vw;
   min-height: 50vh;
   height: auto;
   /* Estilo do contêiner do conteúdo do Popup */

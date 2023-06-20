@@ -8,12 +8,17 @@ import {
 } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './mapa.css';
-import markerIcon from '/img/iconsCaras/bomIcon.png';
-
 import { icon } from 'leaflet';
+import iconeBom from '/img/iconsCaras/bomIcon.png';
+import iconeRuim from '/img/iconsCaras/ruimIcon.png';
 
-const customIcon = icon({
-  iconUrl: markerIcon,
+const customIconBom = icon({
+  iconUrl: iconeBom,
+  iconSize: [50, 50], // Defina o tamanho do ícone
+});
+
+const customIconRuim = icon({
+  iconUrl: iconeRuim,
   iconSize: [50, 50], // Defina o tamanho do ícone
 });
 
@@ -51,7 +56,8 @@ const Map = () => {
     [90, 180],
   ];
 
-  const pinCoordinates = ['10.000', '10.000']; // Substitua latitude e longitude pelas coordenadas desejadas
+  const pinCoordinatesCarinhaVerde = ['20.900', '19.000'];
+  const pinCoordinatesCarinhaAmarela = ['2.000', '160.000'];
 
   return (
     <div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
@@ -70,9 +76,15 @@ const Map = () => {
           maxZoom={maxZoom}
           initialZoom={initialZoom}
         />
-        <Marker position={pinCoordinates} icon={customIcon}>
+        <Marker position={pinCoordinatesCarinhaVerde} icon={customIconBom}>
           <Popup autoPan={true}>
-            <h1>Oi meu amor</h1>
+            <h1>Container 1</h1>
+            <button className="red-button">Botão</button>
+          </Popup>
+        </Marker>
+        <Marker position={pinCoordinatesCarinhaAmarela} icon={customIconRuim}>
+          <Popup autoPan={true}>
+            <h1>Container 2</h1>
             <button className="red-button">Botão</button>
           </Popup>
         </Marker>
