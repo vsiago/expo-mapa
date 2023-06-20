@@ -63,7 +63,6 @@ const Map = () => {
         />
         <Marker position={pinCoordinates}>
           <Popup>
-            <h1>oi</h1>
             <button className="red-button">Botão</button>
           </Popup>
         </Marker>
