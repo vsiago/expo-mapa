@@ -26,26 +26,34 @@ const Map = () => {
     [-90, -180],
     [90, 180],
   ]; // Exemplo: limites da imagem do mundo inteiro
-  const minZoom = 1;
-  const maxZoom = 5;
+  const minZoom = 3;
+  const maxZoom = 4;
   const initialZoom = 2;
   const centerLatitude = 0; // Exemplo: latitude do centro do mapa
   const centerLongitude = 0; // Exemplo: longitude do centro do mapa
+  const mapMinBounds = [
+    [-90, -180],
+    [90, 180],
+  ]; // Limites máximos do mapa
 
   return (
-    <MapContainer
-      center={[centerLatitude, centerLongitude]}
-      zoom={initialZoom}
-      style={{ height: '100vh', width: '100vw' }}
-    >
-      <ZoomableImageOverlay
-        imageUrl={imageUrl}
-        imageBounds={imageBounds}
-        minZoom={minZoom}
-        maxZoom={maxZoom}
-        initialZoom={initialZoom}
-      />
-    </MapContainer>
+    <div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
+      <MapContainer
+        center={[centerLatitude, centerLongitude]}
+        zoom={initialZoom}
+        style={{ height: '100%', width: '100%' }}
+        maxBounds={mapMinBounds}
+        maxBoundsViscosity={1.0}
+      >
+        <ZoomableImageOverlay
+          imageUrl={imageUrl}
+          imageBounds={imageBounds}
+          minZoom={minZoom}
+          maxZoom={maxZoom}
+          initialZoom={initialZoom}
+        />
+      </MapContainer>
+    </div>
   );
 };
 
