@@ -23,4 +23,55 @@
   /* Estilo da ponta do Popup */
 }
 
-/* Personalize outros elementos internos do Popup conforme necessário */
+  /* Estilo para a barra de controle */
+  .leaflet-bar {
+    position: fixed;
+    bottom: 30px;
+    right: 20px;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    border: none!important;
+  }
+
+  .leaflet-bar .leaflet-control-zoom-in, .leaflet-control-zoom-out {
+    width: 50px!important;
+    height: 50px!important;
+    display: flex!important;
+    justify-content: center!important;
+    align-items: center!important;
+    border-radius: 100%!important;
+  }
+
+  /* Estilo para os botões de zoom */
+  .leaflet-bar a {
+    width: 206px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    text-decoration: none;
+    color: #333;
+    background-color: #fff;
+    border-radius: 4px;
+    font-size: 14px;
+  }
+
+  /* Estilo para os botões de zoom ao passar o mouse */
+  .leaflet-bar a:hover {
+    background-color: #f0f0f0;
+  }
+
+  /* Estilo para o botão de zoom de aproximação */
+  .leaflet-bar a.leaflet-zoom-in {
+    font-weight: bold;
+  }
+
+  /* Estilo para o botão de zoom de afastamento */
+  .leaflet-bar a.leaflet-zoom-out {
+    font-weight: bold;
+  }
+
+  .leaflet-control-attribution {
+    display: none!important;
+  }

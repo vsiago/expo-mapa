@@ -47,7 +47,7 @@ const Map = () => {
     [180, 260],
   ];
   const minZoom = 2;
-  const maxZoom = 4;
+  const maxZoom = 3;
   const initialZoom = 1;
   const centerLatitude = 0;
   const centerLongitude = 0;
