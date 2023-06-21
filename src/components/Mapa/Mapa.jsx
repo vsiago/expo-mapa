@@ -1,45 +1,10 @@
 import React, { useEffect } from 'react';
-import {
-  MapContainer,
-  ImageOverlay,
-  Marker,
-  Popup,
-  useMap,
-} from 'react-leaflet';
+import { MapContainer, ImageOverlay, useMap } from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import './mapa.css';
-import { icon } from 'leaflet';
-import iconeBom from '/img/iconsCaras/bomIcon.png';
-import iconeRuim from '/img/iconsCaras/ruimIcon.png';
+import PinPalcoLaia from '../MarkerIcons/PinPalcoLaia';
 
-const customIconBom = icon({
-  iconUrl: iconeBom,
-  iconSize: [50, 50], // Defina o tamanho do ícone
-});
-
-const customIconRuim = icon({
-  iconUrl: iconeRuim,
-  iconSize: [50, 50], // Defina o tamanho do ícone
-});
-
-const ZoomableImageOverlay = ({
-  imageUrl,
-  imageBounds,
-  minZoom,
-  maxZoom,
-  initialZoom,
-}) => {
-  const map = useMap();
-
-  useEffect(() => {
-    map.setMinZoom(minZoom);
-    map.setMaxZoom(maxZoom);
-    map.setZoom(initialZoom);
-  }, [map, minZoom, maxZoom, initialZoom]);
-
-  return <ImageOverlay url={imageUrl} bounds={imageBounds} />;
-};
-
+// CONSTRUCAO DO MAPA BASEADO NA IMAGEM
 const Map = () => {
   const imageUrl = './img/mapa-expo.png';
   const imageBounds = [
@@ -47,7 +12,7 @@ const Map = () => {
     [180, 260],
   ];
   const minZoom = 2;
-  const maxZoom = 3;
+  const maxZoom = 5;
   const initialZoom = 1;
   const centerLatitude = 0;
   const centerLongitude = 0;
@@ -56,8 +21,23 @@ const Map = () => {
     [90, 180],
   ];
 
-  const pinCoordinatesCarinhaVerde = ['20.900', '19.000'];
-  const pinCoordinatesCarinhaAmarela = ['2.000', '160.000'];
+  const ZoomableImageOverlay = ({
+    imageUrl,
+    imageBounds,
+    minZoom,
+    maxZoom,
+    initialZoom,
+  }) => {
+    const map = useMap();
+
+    useEffect(() => {
+      map.setMinZoom(minZoom);
+      map.setMaxZoom(maxZoom);
+      map.setZoom(initialZoom);
+    }, [map, minZoom, maxZoom, initialZoom]);
+
+    return <ImageOverlay url={imageUrl} bounds={imageBounds} />;
+  };
 
   return (
     <div style={{ position: 'relative', height: '100vh', width: '100vw' }}>
@@ -68,7 +48,6 @@ const Map = () => {
         maxBounds={mapMinBounds}
         maxBoundsViscosity={1.0}
       >
-        <h1>Ola</h1>
         <ZoomableImageOverlay
           imageUrl={imageUrl}
           imageBounds={imageBounds}
@@ -76,18 +55,7 @@ const Map = () => {
           maxZoom={maxZoom}
           initialZoom={initialZoom}
         />
-        <Marker position={pinCoordinatesCarinhaVerde} icon={customIconBom}>
-          <Popup autoPan={true}>
-            <h1>Container 1</h1>
-            <button className="red-button">Botão</button>
-          </Popup>
-        </Marker>
-        <Marker position={pinCoordinatesCarinhaAmarela} icon={customIconRuim}>
-          <Popup autoPan={true}>
-            <h1>Container 2</h1>
-            <button className="red-button">Botão</button>
-          </Popup>
-        </Marker>
+        <PinPalcoLaia latitude={'10.000'} longitude={'15.000'} />
       </MapContainer>
     </div>
   );

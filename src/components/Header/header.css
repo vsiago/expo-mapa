@@ -27,6 +27,7 @@
   opacity: 0;
   visibility: hidden;
   transition: .5s;
+  
 }
 
 .header .navbar li a {
@@ -61,13 +62,10 @@
   align-items: center;
   position: relative;
   z-index: 1;
+  cursor: pointer;
+  margin-top: -20px;
 }
 
-.btn-navbar svg{ 
-  width: 100%;
-  margin-top: -30px;
-  cursor: pointer;
-}
 
 /* Btn Avaliacao */
 .btnAvaliacao {
@@ -78,8 +76,9 @@
 }
 
 .iconArrowDown {
-  width: 25px;
+  width: 27px;
   position: absolute;
+  top: 65px;
   transition: .4s;
   cursor: pointer;
 }
