@@ -1,4 +1,3 @@
-import React, { useState } from 'react';
 import { icon } from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
 import pinPalcoLaiaIcon from '/img/iconsCaras/muitoRuimIcon.png';
@@ -19,8 +18,34 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
       icon={customIconPalcoLaia}
     >
         <Popup autoPan={false} >
-          <h1>Container 2</h1>
-          <button>Botão</button>
+          <main>
+            <header>
+              <div className='img-container'>
+                <img src="./img/PalcoLaia/palco-laia.png" width={480} alt="" />
+              </div>
+              <div className='containerIntro'>
+                <h1>Palco Laiá</h1>
+                <p>Palco principal da Expo Itaguaí completo de celebridades nacionais. As melhores atrações do Brasil já passaram por aqui.</p>
+              </div>
+            </header>
+            <footer>
+              <nav>
+              <h3>TODAS AS ATRAÇÕES:</h3>
+                <ul className='navAtracoes'>
+                  <li>img 1</li>
+                  <li>img 2</li>
+                  <li>img 3</li>
+                  <li>img 4</li>
+                  <li>img 5</li>
+                  <li>img 6</li>
+                  <li>img 7</li>
+                  <li>img 7</li>
+                  <li>img 7</li>
+                  <li>img 7</li>
+                </ul>
+              </nav>
+            </footer>
+          </main>
         </Popup>
     </Marker>
   );
