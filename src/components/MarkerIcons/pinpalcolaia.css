@@ -1,5 +1,16 @@
 body {
-  position: relative!important;
+  position: relative !important;
+}
+
+.leaflet-container {
+  width: 100% !important;
+  height: 100% !important;
+}
+
+.leaflet-popup {
+  position: relative !important;
+  width: 100% !important;
+  height: 100% !important;
 }
 
 .leaflet-popup-content-wrapper {
@@ -9,13 +20,33 @@ body {
   transform: translate(-50%, -50%);
   width: 80vw;
   height: 80vh;
-  /* Estilo do contêiner do conteúdo do Popup */
+  background-color: black;
+  border-radius: 0;
+  opacity: .9;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.leaflet-popup-content {
+  width: 100%;
+  height: 100%;
+  position: relative;
+
+}
+
+.leaflet-popup-wrapper {
+  position: relative;
+  /* Outras propriedades CSS */
+}
+
+.leaflet-popup-close-button {
+  background-color: red !important;
+  top: 0 !important;
+  right: 0 !important;
 }
 
 .leaflet-popup-tip-container {
   display: none;
-}
-
-.leaflet-popup-close-button {
-  display: none!important;
 }
