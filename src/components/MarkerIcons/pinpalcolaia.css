@@ -1,0 +1,21 @@
+body {
+  position: relative!important;
+}
+
+.leaflet-popup-content-wrapper {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 80vh;
+  /* Estilo do contêiner do conteúdo do Popup */
+}
+
+.leaflet-popup-tip-container {
+  display: none;
+}
+
+.leaflet-popup-close-button {
+  display: none!important;
+}
