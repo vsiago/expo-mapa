@@ -2,6 +2,7 @@ import { icon } from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
 import pinPalcoLaiaIcon from '/img/iconsCaras/muitoRuimIcon.png';
 import './pinpalcolaia.css';
+import PalcoLaia from '../../ModelSetoresExpo/PalcoLaia';
 
 const PinPalcoLaia = ({ latitude, longitude }) => {
   const customIconPalcoLaia = icon({
@@ -21,11 +22,11 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
           <main>
             <header>
               <div className='img-container'>
-                <img src="./img/PalcoLaia/palco-laia.png" width={480} alt="" />
+                <img src={PalcoLaia.URLImg} alt="" />
               </div>
               <div className='containerIntro'>
-                <h1>Palco Laiá</h1>
-                <p>Palco principal da Expo Itaguaí completo de celebridades nacionais. As melhores atrações do Brasil já passaram por aqui.</p>
+                <h1>{PalcoLaia.name}</h1>
+                <p>{PalcoLaia.description}</p>
               </div>
             </header>
             <footer>

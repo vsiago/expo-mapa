@@ -26,18 +26,18 @@ body {
   justify-content: center;
   align-items: center;
   color: white;
-  background: rgba( 37, 50, 66, .83 );
-  box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.7 );
-  backdrop-filter: blur( 13.5px );
-  -webkit-backdrop-filter: blur( 13.5px );
+  background: rgba(37, 50, 66, .83);
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.7);
+  backdrop-filter: blur(13.5px);
+  -webkit-backdrop-filter: blur(13.5px);
   border-radius: 10px;
   border: 3px solid rgba(162, 191, 218, 0.233);
-  -moz-box-shadow: -1px 39px 55px 0px rgba(37,50,66,1);
-  box-shadow: -1px 39px 55px 0px rgba(37,50,66,.5);
+  -moz-box-shadow: -1px 39px 55px 0px rgba(37, 50, 66, 1);
+  box-shadow: -1px 39px 55px 0px rgba(37, 50, 66, .5);
 }
 
 .leaflet-popup-close-button {
-  display: none!important;
+  display: none !important;
   background-color: red !important;
   top: 0 !important;
   right: 0 !important;
@@ -50,11 +50,11 @@ body {
 /* CONFIG POPUP CONTEUDO */
 
 .leaflet-popup-content {
-  width: 100%!important;
+  width: 100% !important;
   height: 100% !important;
   position: relative;
   /* border: solid 1px red; */
-  margin: 0!important;
+  margin: 0 !important;
 }
 
 .leaflet-popup-content main {
@@ -85,6 +85,10 @@ body {
   padding-bottom: 20px;
 }
 
+.leaflet-popup-content main header .img-container img {
+  width: 80%;
+}
+
 .leaflet-popup-content main header .containerIntro {
   width: 50%;
   /* border: solid 1px rgb(255, 157, 0); */
@@ -98,9 +102,10 @@ body {
 }
 
 .leaflet-popup-content main header .containerIntro p {
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   width: 80%;
-  font-weight: 300;
+  font-weight: 00;
+  font-family: Poppins, sans-serif;
   color: #AAB7BF;
 }
 
@@ -112,22 +117,20 @@ body {
   align-items: center;
   height: 40%;
   width: 100%;
-  background: linear-gradient(90deg, rgba(37,50,66,0) 0%, rgba(37,50,66,0.5) 25%, rgba(37,50,66,1) 50%, rgba(37,50,66,0.5) 75%, rgba(37,50,66,0) 100%);
+  background: linear-gradient(90deg, rgba(37, 50, 66, 0) 0%, rgba(37, 50, 66, 0.5) 25%, rgba(37, 50, 66, 1) 50%, rgba(37, 50, 66, 0.5) 75%, rgba(37, 50, 66, 0) 100%);
   z-index: 20;
   padding-top: 30px;
   overflow-x: scroll;
   overflow-y: hidden;
-  cursor: move;
-
 }
 
-.leaflet-popup-content main footer nav{ 
+.leaflet-popup-content main footer nav {
   position: relative;
 }
 
 .leaflet-popup-content main footer h3 {
   text-transform: uppercase;
-  font-family: Poppins;
+  font-family: Poppins, sans-serif;
   font-weight: 600;
   letter-spacing: 2px;
   color: #a9b1b8;
@@ -148,7 +151,7 @@ body {
 
 .leaflet-popup-content main footer .navAtracoes li {
   /* border: solid 1px yellowgreen; */
-  width: 150px;
+  width: 130px;
   height: 130px;
   display: flex;
   justify-content: center;
