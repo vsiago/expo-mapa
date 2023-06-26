@@ -33,16 +33,9 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
               <nav>
               <h3>TODAS AS ATRAÇÕES:</h3>
                 <ul className='navAtracoes'>
-                  <li>img 1</li>
-                  <li>img 2</li>
-                  <li>img 3</li>
-                  <li>img 4</li>
-                  <li>img 5</li>
-                  <li>img 6</li>
-                  <li>img 7</li>
-                  <li>img 7</li>
-                  <li>img 7</li>
-                  <li>img 7</li>
+                  {PalcoLaia.atracoes.map((atracao) => (
+                    <li><p key={atracao.id} name={atracao.name}>{atracao.name}</p></li>
+                  ))}
                 </ul>
               </nav>
             </footer>

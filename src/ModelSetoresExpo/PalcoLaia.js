@@ -6,7 +6,7 @@ const PalcoLaia = {
     {
       name: 'Leo Santana',
       description: 'Cantor nacional de Axe, data do show: 05 de julho',
-      icon: '../img/PalcoLaia/leoSantana/leo-santana-icon.png',
+      icon: '../img/iconsCaras/muitoBomIcon.png',
       img: '../img/PalcoLaia/leoSantana/leo-santana.png',
     },
     {
