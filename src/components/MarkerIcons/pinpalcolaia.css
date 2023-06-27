@@ -176,3 +176,7 @@ body {
   cursor: pointer;
   z-index: 999;
 }
+
+img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
+  margin-top: -87px!important;
+}
