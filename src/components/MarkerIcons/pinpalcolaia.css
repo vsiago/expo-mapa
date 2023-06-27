@@ -115,7 +115,7 @@ body {
   display: flex;
   justify-content: start;
   align-items: center;
-  height: 40%;
+  height: 35%;
   width: 100%;
   background: linear-gradient(90deg, rgba(37, 50, 66, 0) 0%, rgba(37, 50, 66, 0.5) 25%, rgba(37, 50, 66, 1) 50%, rgba(37, 50, 66, 0.5) 75%, rgba(37, 50, 66, 0) 100%);
   z-index: 20;
@@ -132,12 +132,13 @@ body {
   text-transform: uppercase;
   font-family: Poppins, sans-serif;
   font-weight: 600;
+  font-size: .9rem;
   letter-spacing: 2px;
   color: #a9b1b8;
   margin-left: 65px;
   z-index: 2000;
   position: fixed;
-  margin-top: -100px;
+  margin-top: -93px;
 }
 
 .leaflet-popup-content main footer .navAtracoes {
@@ -157,6 +158,30 @@ body {
   justify-content: center;
   align-items: center;
   border: solid 1px #777;
+  border-radius: 15px;
+  background-color: #C7CBD8;
+  transition: .4s;
+  opacity: .7;
+}
+
+/* estados do botão */
+
+.leaflet-popup-content main footer .navAtracoes li:active {
+  background-color: white;
+  transition: .2s;
+  width: 140px;
+  height: 140px;
+}
+
+.leaflet-popup-content main footer .navAtracoes li:hover {
+  border: solid 4px rgb(50, 183, 255);
+  opacity: 1;
+  
+} 
+
+.leaflet-popup-content main footer .navAtracoes li img {
+  width: 100%;
+  height: 100%;
   border-radius: 15px;
 }
 

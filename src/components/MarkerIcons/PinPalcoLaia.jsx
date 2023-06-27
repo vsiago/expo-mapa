@@ -38,7 +38,7 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
   const renderAtracao = () => {
     if (itemSelecionado) {
       return (
-        <header>
+        <header className='fade-in'>
           <div className='img-container'>
             <img src={itemSelecionado.URLImg} alt='' />
           </div>
@@ -50,7 +50,7 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
       );
     } else {
       return (
-        <header>
+        <header className='fade-in'>
           <div className='img-container'>
             <img src={PalcoLaia.URLImg} alt='' />
           </div>
@@ -74,8 +74,8 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
               <h3>TODAS AS ATRAÇÕES:</h3>
               <ul className='navAtracoes'>
                 {PalcoLaia.atracoes.map((atracao) => (
-                  <li key={atracao.id}>
-                    <p onClick={() => handleItemClick(atracao)}>{atracao.name}</p>
+                  <li onClick={() => handleItemClick(atracao)} key={atracao.id}>
+                    <img src={atracao.icon} alt="" />
                   </li>
                 ))}
               </ul>
