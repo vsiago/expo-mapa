@@ -25,7 +25,7 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
     setItemSelecionado(item);
     const newTimeoutRef = setTimeout(() => {
       handleClickBtnNull();
-    }, 5000);
+    }, 8000);
     setTimeoutRef(newTimeoutRef); // Armazena a referência do novo setTimeout
   };
 

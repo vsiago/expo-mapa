@@ -6,10 +6,10 @@ import PinPalcoLaia from '../MarkerIcons/PinPalcoLaia';
 
 // CONSTRUCAO DO MAPA BASEADO NA IMAGEM
 const Map = () => {
-  const imageUrl = './img/mapa-expo.png';
+  const imageUrl = './img/newMapaExpoDark.jpg';
   const imageBounds = [
-    [-90, -260],
-    [180, 260],
+    [-90, -360],
+    [180, 360],
   ];
   const minZoom = 2.1;
   const maxZoom = 5;
