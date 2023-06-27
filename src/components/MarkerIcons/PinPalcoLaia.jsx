@@ -15,8 +15,15 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
 
   const [itemSelecionado, setItemSelecionado] = useState(null);
 
+  const handleClickBtnNull = () => {
+    setItemSelecionado(null)
+  }
+
   const handleItemClick = (item) => {
     setItemSelecionado(item);
+    setTimeout(() => {
+      handleClickBtnNull()
+    }, 5000)
   };
 
   const renderAtracao = () => {
@@ -51,6 +58,7 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
       <Popup autoPan={false}>
         <main>
+          <div className='btnHomePrgramacao' onClick={handleClickBtnNull}>BTN</div>
           {renderAtracao()}
           <footer>
             <nav>

@@ -159,3 +159,20 @@ body {
   border: solid 1px #777;
   border-radius: 15px;
 }
+
+/* btnHomePrgramacao config */
+
+.btnHomePrgramacao {
+  width: 65px;
+  height: 65px;
+  background-color: #fff;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  cursor: pointer;
+  z-index: 999;
+}
