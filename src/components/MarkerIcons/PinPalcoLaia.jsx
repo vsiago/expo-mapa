@@ -6,6 +6,13 @@ import './pinpalcolaia.css';
 import PalcoLaia from '../../ModelProgramacaoExpo/PalcoLaia';
 
 const PinPalcoLaia = ({ latitude, longitude }) => {
+  useEffect(() => {
+    const pin = document.querySelector('.leaflet-marker-icon')
+    pin.addEventListener('click', () => {
+      
+    })
+  },[])
+
   const customIconPalcoLaia = icon({
     iconUrl: pinPalcoLaiaIcon,
     iconSize: [77, 100],
@@ -65,9 +72,9 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
 
   return (
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
-      <Popup autoPan={false}>
+      <Popup autoPan={true}>
         <main>
-          <div className='btnHomePrgramacao' onClick={handleClickBtnNull}>BTN</div>
+          <div className='btnHomePrgramacao' onClick={handleClickBtnNull}></div>
           {renderAtracao()}
           <footer>
             <nav>

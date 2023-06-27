@@ -34,6 +34,8 @@ body {
   border: 3px solid rgba(162, 191, 218, 0.233);
   -moz-box-shadow: -1px 39px 55px 0px rgba(37, 50, 66, 1);
   box-shadow: -1px 39px 55px 0px rgba(37, 50, 66, .5);
+  margin-left: 400px;
+  margin-top: 220px;
 }
 
 .leaflet-popup-close-button {
@@ -169,15 +171,14 @@ body {
 .leaflet-popup-content main footer .navAtracoes li:active {
   background-color: white;
   transition: .2s;
-  width: 140px;
-  height: 140px;
+  width: 105px;
+  height: 105px;
 }
 
 .leaflet-popup-content main footer .navAtracoes li:hover {
   border: solid 4px rgb(50, 183, 255);
   opacity: 1;
-  
-} 
+}
 
 .leaflet-popup-content main footer .navAtracoes li img {
   width: 100%;
@@ -203,5 +204,5 @@ body {
 }
 
 img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
-  margin-top: -87px!important;
+  margin-top: -87px !important;
 }

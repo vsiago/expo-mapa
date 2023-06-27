@@ -55,7 +55,7 @@ const Map = () => {
           maxZoom={maxZoom}
           initialZoom={initialZoom}
         />
-        <PinPalcoLaia latitude={'20.000'} longitude={'22.000'} />
+        <PinPalcoLaia latitude={'67.000'} longitude={'-126.000'} />
       </MapContainer>
     </div>
   );
