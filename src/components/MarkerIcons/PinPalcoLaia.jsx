@@ -1,5 +1,5 @@
 import { icon } from 'leaflet';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import pinPalcoLaiaIcon from '/img/iconsCaras/muitoRuimIcon.png';
 import './pinpalcolaia.css';
@@ -14,24 +14,33 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
   const coordPinPalcoLaia = [latitude, longitude];
 
   const [itemSelecionado, setItemSelecionado] = useState(null);
+  const [timeoutRef, setTimeoutRef] = useState(null); // Referência para o setTimeout
 
   const handleClickBtnNull = () => {
-    setItemSelecionado(null)
-  }
+    setItemSelecionado(null);
+  };
 
   const handleItemClick = (item) => {
+    clearTimeout(timeoutRef); // Limpa o timeout atual
     setItemSelecionado(item);
-    setTimeout(() => {
-      handleClickBtnNull()
-    }, 5000)
+    const newTimeoutRef = setTimeout(() => {
+      handleClickBtnNull();
+    }, 5000);
+    setTimeoutRef(newTimeoutRef); // Armazena a referência do novo setTimeout
   };
+
+  useEffect(() => {
+    return () => {
+      clearTimeout(timeoutRef); // Limpa o timeout ao desmontar o componente
+    };
+  }, [timeoutRef]);
 
   const renderAtracao = () => {
     if (itemSelecionado) {
       return (
         <header>
           <div className='img-container'>
-            <img src={PalcoLaia.URLImg} alt='' />
+            <img src={itemSelecionado.URLImg} alt='' />
           </div>
           <div className='containerIntro'>
             <h1>{itemSelecionado.name}</h1>
