@@ -2,7 +2,7 @@ import { icon } from 'leaflet';
 import { Marker, Popup } from 'react-leaflet';
 import pinPalcoLaiaIcon from '/img/iconsCaras/muitoRuimIcon.png';
 import './pinpalcolaia.css';
-import PalcoLaia from '../../ModelSetoresExpo/PalcoLaia';
+import PalcoLaia from '../../ModelProgramacaoExpo/PalcoLaia';
 
 const PinPalcoLaia = ({ latitude, longitude }) => {
   const customIconPalcoLaia = icon({
