@@ -32,6 +32,7 @@ export default function Header() {
 
   return (
     <header className="headerMain">
+        <p className='tourVirtual'>tour virtual</p>
       <nav className={`header ${isOpen ? 'open' : ''}`}>
         <Link to="https://expo-mapa.vercel.app">
           <img
@@ -71,9 +72,10 @@ export default function Header() {
           alt="Logo Prefeitura 2023"
         />
       </nav>
-      <div onClick={toggleMenu} className="btn-navbar">
-        <img src="./img/btnNavbar.svg" alt="" />
+      <div className="btn-navbar">
+        <img onClick={toggleMenu} src="./img/btnNavbar.svg" alt="" />
         <img
+          onClick={toggleMenu}
           className={`iconArrowDown ${navbarShow ? 'iconArrowUp' : ''}`}
           src="../img/double-arrow-down.png"
           alt=""
