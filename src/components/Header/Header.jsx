@@ -31,8 +31,8 @@ export default function Header() {
   };
 
   return (
-    <header className="headerMain">
-        <p className='tourVirtual'>tour virtual</p>
+    <header className={`headerMain ${navbarShow ? 'headerMainBGShow' : ''}`} onClick={toggleMenu}>
+        <p className={`tourVirtual ${navbarShow ? 'tourVirtualPDelay' : ''}`}>{navbarShow ? 'explore locais' : 'Tour Virtual'}</p>
       <nav className={`header ${isOpen ? 'open' : ''}`}>
         <Link to="https://expo-mapa.vercel.app">
           <img
@@ -73,7 +73,7 @@ export default function Header() {
         />
       </nav>
       <div className="btn-navbar">
-        <img onClick={toggleMenu} src="./img/btnNavbar.svg" alt="" />
+        <img src="./img/btnNavbar.svg" alt="" />
         <img
           onClick={toggleMenu}
           className={`iconArrowDown ${navbarShow ? 'iconArrowUp' : ''}`}

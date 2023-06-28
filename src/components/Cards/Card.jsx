@@ -1,44 +1,30 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './card.css';
-import { useState } from 'react';
 
-export default function Card({ TipoDeArea }) {
+export default function Card({ TipoDeArea, onAvaliacaoButtonClick }) {
   const [activeButton, setActiveButton] = useState('');
 
   const handleButtonClick = (button) => {
     setActiveButton(button);
+    onAvaliacaoButtonClick(TipoDeArea, button);
   };
 
   return (
-    <div className={`cardContainer ${
-      activeButton === 'muitoRuim' ? 'borderMuitoRuim' : '' ||
-      activeButton === 'ruim' ? 'borderRuim' : '' ||
-      activeButton === 'razoavel' ? 'borderRazoavel' : '' ||
-      activeButton === 'bom' ? 'borderBom' : '' ||
-      activeButton === 'muitoBom' ? 'borderMuitoBom' : ''
-      }`}>
+    <div className={`cardContainer ${activeButton ? `border${activeButton}` : ''}`}>
       <div className="titleCardContainer">
         <h3>{TipoDeArea}</h3>
       </div>
 
       <div
         onClick={() => handleButtonClick('muitoRuim')}
-        className={`icon ${
-          activeButton === 'muitoRuim' ? 'muitoRuimShow' : ''
-        }`}
+        className={`icon ${activeButton === 'muitoRuim' ? 'muitoRuimShow' : ''}`}
       >
         <img
-          className={
-            activeButton === 'muitoRuim'
-              ? 'muitoRuimActive iconMuitoRuimActive'
-              : ''
-          }
+          className={activeButton === 'muitoRuim' ? 'muitoRuimActive iconMuitoRuimActive' : ''}
           src="./img/iconsCaras/muitoRuimIcon.png"
           alt=""
         />
-        <p
-          className={activeButton === 'muitoRuim' ? 'TextMuitoRuimActive' : ''}
-        >
+        <p className={activeButton === 'muitoRuim' ? 'TextMuitoRuimActive' : ''}>
           Muito ruim
         </p>
       </div>
@@ -56,29 +42,19 @@ export default function Card({ TipoDeArea }) {
       </div>
 
       <div
-        onClick={() => {
-          handleButtonClick('razoavel');
-        }}
+        onClick={() => handleButtonClick('razoavel')}
         className={`icon ${activeButton === 'razoavel' ? 'razoavelShow' : ''}`}
       >
         <img
-          className={
-            activeButton === 'razoavel'
-              ? 'razoavelActive iconRazoavelActive'
-              : ''
-          }
+          className={activeButton === 'razoavel' ? 'razoavelActive iconRazoavelActive' : ''}
           src="./img/iconsCaras/razoavelIcon.png"
           alt=""
         />
-        <p className={activeButton === 'razoavel' ? 'TextRazoavelActive' : ''}>
-          Razoável
-        </p>
+        <p className={activeButton === 'razoavel' ? 'TextRazoavelActive' : ''}>Razoável</p>
       </div>
 
       <div
-        onClick={() => {
-          handleButtonClick('bom');
-        }}
+        onClick={() => handleButtonClick('bom')}
         className={`icon ${activeButton === 'bom' ? 'bomShow' : ''}`}
       >
         <img
@@ -90,17 +66,11 @@ export default function Card({ TipoDeArea }) {
       </div>
 
       <div
-        onClick={() => {
-          handleButtonClick('muitoBom');
-        }}
+        onClick={() => handleButtonClick('muitoBom')}
         className={`icon ${activeButton === 'muitoBom' ? 'muitoBomShow' : ''}`}
       >
         <img
-          className={
-            activeButton === 'muitoBom'
-              ? 'muitoBomActive iconMuitoBomActive'
-              : ''
-          }
+          className={activeButton === 'muitoBom' ? 'muitoBomActive iconMuitoBomActive' : ''}
           src="./img/iconsCaras/muitoBomIcon.png"
           alt=""
         />
@@ -111,3 +81,4 @@ export default function Card({ TipoDeArea }) {
     </div>
   );
 }
+``

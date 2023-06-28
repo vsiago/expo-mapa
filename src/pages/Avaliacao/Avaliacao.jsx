@@ -1,16 +1,37 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './avaliacao.css';
 import { Link } from 'react-router-dom';
-import { useState } from 'react';
-import buttonClickSound from '/sound/ui_tap-variant-01.wav';
 import Card from '../../components/Cards/Card';
 
 export default function Avaliacao() {
-  const [audio] = useState(new Audio(buttonClickSound));
+  const [avaliacaoResultados, setAvaliacaoResultados] = useState({});
 
-  const handleButtonClick = () => {
-    audio.play();
-    // Outras ações quando o botão é clicado
+  const handleAvaliacaoButtonClick = (tipoDeArea, button) => {
+    setAvaliacaoResultados((prevResults) => ({
+      ...prevResults,
+      [tipoDeArea]: button,
+    }));
+  };
+
+  const handleEnviarAvaliacaoClick = () => {
+    if(avaliacaoResultados.Segurança === undefined) {
+     console.log('Avalie a nossa seguranca');
+    }
+    if(avaliacaoResultados.Alimentação === undefined) {
+     console.log('Avalie a nossa alimentacao');
+    }
+    if(avaliacaoResultados.Organização === undefined) {
+      console.log('Avalie a nossa organização');
+     }
+     if(avaliacaoResultados.Atrações === undefined) {
+      console.log('Avalie as nossas atrações');
+     }
+     if(avaliacaoResultados.Segurança &&
+        avaliacaoResultados.Alimentação &&
+        avaliacaoResultados.Organização &&
+        avaliacaoResultados.Atrações ) {
+          console.log(avaliacaoResultados);
+     }
   };
 
   return (
@@ -24,12 +45,9 @@ export default function Avaliacao() {
           />
         </h1>
         <h1 className="titleOpiniao">Dê sua opinião sobre a Expo</h1>
-        <p className="subTitleOpniao">
-          Sua resposta é muito importante para nós
-        </p>
+        <p className="subTitleOpniao">Sua resposta é muito importante para nós</p>
         <Link to="/home">
           <img
-            onClick={handleButtonClick}
             className="btnVoltar"
             src="./img/btnVoltar.png"
             alt=""
@@ -39,19 +57,33 @@ export default function Avaliacao() {
       <section>
         <div className="cardsAvaliacao">
           <div className="cardSeguraca card">
-            <Card TipoDeArea={'Segurança'} />
+            <Card
+              TipoDeArea="Segurança"
+              onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
+            />
           </div>
           <div className="cardAlimentacao card">
-            <Card TipoDeArea={'Alimentação'} />
+            <Card
+              TipoDeArea="Alimentação"
+              onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
+            />
           </div>
           <div className="cardOrganizacao card">
-            <Card TipoDeArea={'Organização'} />
+            <Card
+              TipoDeArea="Organização"
+              onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
+            />
           </div>
           <div className="cardAtracao card">
-            <Card TipoDeArea={'Atrações'} />
+            <Card
+              TipoDeArea="Atrações"
+              onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
+            />
           </div>
         </div>
-        <button className="btnEnviarAvaliacao">Enviar avaliação</button>
+        <button className="btnEnviarAvaliacao" onClick={handleEnviarAvaliacaoClick}>
+          Enviar avaliação
+        </button>
       </section>
       <footer>
         <img className="scLogos" src="../img/scLogos.png" alt="" />
