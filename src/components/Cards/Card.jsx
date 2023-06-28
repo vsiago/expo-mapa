@@ -10,7 +10,13 @@ export default function Card({ TipoDeArea, onAvaliacaoButtonClick }) {
   };
 
   return (
-    <div className={`cardContainer ${activeButton ? `border${activeButton}` : ''}`}>
+    <div className={`cardContainer ${
+      activeButton === 'muitoRuim' ? 'borderMuitoRuim' : '' ||
+      activeButton === 'ruim' ? 'borderRuim' : '' ||
+      activeButton === 'razoavel' ? 'borderRazoavel' : '' ||
+      activeButton === 'bom' ? 'borderBom' : '' ||
+      activeButton === 'muitoBom' ? 'borderMuitoBom' : ''
+      }`}>
       <div className="titleCardContainer">
         <h3>{TipoDeArea}</h3>
       </div>
