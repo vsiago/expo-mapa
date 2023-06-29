@@ -4,14 +4,15 @@ import './header.css';
 import { Link } from 'react-router-dom';
 import buttonClickSound from '/sound/ui_tap-variant-01.wav';
 
-export default function Header() {
+export default function Header({atualizarEstadoFilho}) {
+  const [audio] = useState(new Audio(buttonClickSound));
   const [isOpen, setIsOpen] = useState(false);
   const [logoShow, setLogoHidden] = useState(true);
   const [navbarShow, setNavbarShow] = useState(false);
-  const [audio] = useState(new Audio(buttonClickSound));
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
+    atualizarEstadoFilho(!isOpen)
     toggleLogoHidden();
     ToggleNavbar();
     handleButtonClick();
@@ -31,7 +32,7 @@ export default function Header() {
   };
 
   return (
-    <header className={`headerMain ${navbarShow ? 'headerMainBGShow' : ''}`} onClick={toggleMenu}>
+    <header className={`headerMain ${navbarShow ? 'headerMainBGShow' : ''}`}>
         <p className={`tourVirtual ${navbarShow ? 'tourVirtualPDelay' : ''}`}>{navbarShow ? 'explore locais' : 'Tour Virtual'}</p>
       <nav className={`header ${isOpen ? 'open' : ''}`}>
         <Link to="https://expo-mapa.vercel.app">
@@ -73,13 +74,13 @@ export default function Header() {
         />
       </nav>
       <div className="btn-navbar">
-        <img src="./img/btnNavbar.svg" alt="" />
         <img
           onClick={toggleMenu}
           className={`iconArrowDown ${navbarShow ? 'iconArrowUp' : ''}`}
           src="../img/double-arrow-down.png"
           alt=""
         />
+        <img src="./img/btnNavbar.svg" alt="" />
       </div>
     </header>
   );

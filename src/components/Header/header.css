@@ -1,5 +1,5 @@
 /* HEADER */
-.headerMain {
+/* .headerMain {
   height: 20%;
   background: linear-gradient(rgba(0, 0, 0, .7) 10%, rgba(4, 62, 162, 0) 100%);
   transition: .6s cubic-bezier(.08, .82, .17, 1);
@@ -8,7 +8,7 @@
 .headerMainBGShow {
   height: 100%;
   transition: .6s cubic-bezier(.08, .82, .17, 1);
-}
+} */
 
 .header {
   background: radial-gradient(59.36% 3107.35% at 49.08% -51.8%, #215CB1 0%, #1A4277 49.5%, #142473 100%)

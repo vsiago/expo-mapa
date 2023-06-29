@@ -9,10 +9,19 @@ const Home = () => {
   useEffect(() => {
     setShowAnimation(true);
   }, []);
+  
+  const [estadoFilho, setEstadoFilho] = useState('');
+
+  const atualizarEstadoFilho = (novoEstado) => {
+    setEstadoFilho(novoEstado);
+  };
+
+  console.log(estadoFilho)
 
   return (
     <div className="home-container">
-      <Header />
+      <Header atualizarEstadoFilho={atualizarEstadoFilho} />
+      <div className={`sombra ${estadoFilho ? 'sombraShow' : ''}`} style={{pointerEvents: !estadoFilho ? 'none' : 'auto'}}></div>
       <Map />
     </div>
   );
