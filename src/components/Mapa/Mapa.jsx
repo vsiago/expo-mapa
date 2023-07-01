@@ -11,7 +11,7 @@ const Map = () => {
     [-90, -360],
     [180, 360],
   ];
-  const minZoom = 2.5;
+  const minZoom = 2;
   const maxZoom = 5;
   const initialZoom = 1;
   const centerLatitude = 0;
