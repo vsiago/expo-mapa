@@ -74,7 +74,7 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
       <Popup autoPan={true}>
         <main>
-          <div className='btnHomePrgramacao' onClick={handleClickBtnNull}></div>
+          <div className='btnHomePrgramacao' onClick={handleClickBtnNull}>HOME</div>
           {renderAtracao()}
           <footer>
             <nav>
