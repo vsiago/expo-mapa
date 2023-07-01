@@ -6,14 +6,14 @@ import PinPalcoLaia from '../MarkerIcons/PinPalcoLaia';
 
 // CONSTRUCAO DO MAPA BASEADO NA IMAGEM
 const Map = () => {
-  const imageUrl = './img/mapa.jpg';
+  const imageUrl = 'https://res.cloudinary.com/dbjzaupe7/image/upload/v1688239136/expo-mapa/mapa_oryswt.jpg';
   const imageBounds = [
     [-90, -360],
     [180, 360],
   ];
-  const minZoom = 1.7;
+  const minZoom = 2.5;
   const maxZoom = 5;
-  const initialZoom = 0;
+  const initialZoom = 1;
   const centerLatitude = 0;
   const centerLongitude = 0;
   const mapMinBounds = [
