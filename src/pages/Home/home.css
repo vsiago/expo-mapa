@@ -94,7 +94,10 @@
 
   .leaflet-popup-content main footer nav ul {
     margin-left: -30px;
-    pointer-events: auto;
+    pointer-events: auto!important;
+  }
+  .leaflet-popup-content main footer nav ul li{
+    pointer-events: auto!important;
   }
 
 }
