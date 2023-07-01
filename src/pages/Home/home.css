@@ -91,6 +91,10 @@
     height: 30%;
   }
 
+  .leaflet-popup-content main footer nav ul {
+    margin-left: -30px;
+  }
+
 }
 
 /* Estilos para telas com largura mínima de 768px */
