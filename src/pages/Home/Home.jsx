@@ -1,10 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import Header from '../../components/Header/Header';
 import Map from '../../components/Mapa/Mapa';
-
 import './home.css';
+import { useMediaQuery } from 'react-responsive';
+
+
 
 const Home = () => {
+  const isMobile = useMediaQuery({ maxWidth: 480 });
+
   const [showAnimation, setShowAnimation] = useState(false);
   useEffect(() => {
     setShowAnimation(true);
@@ -20,9 +24,15 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <Header atualizarEstadoFilho={atualizarEstadoFilho} />
-      <div className={`sombra ${estadoFilho ? 'sombraShow' : ''}`} style={{pointerEvents: !estadoFilho ? 'none' : 'auto'}}></div>
-      <Map />
+      {isMobile ? (
+        <>
+          <header>Header para celular</header>
+          <div className={`sombra ${estadoFilho ? 'sombraShow' : ''}`} style={{pointerEvents: !estadoFilho ? 'none' : 'auto'}}></div>
+        </>
+      ) : (
+        <Header atualizarEstadoFilho={atualizarEstadoFilho} />
+      )}
+      <Map /> 
     </div>
   );
 };

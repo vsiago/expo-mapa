@@ -6,7 +6,7 @@ import PinPalcoLaia from '../MarkerIcons/PinPalcoLaia';
 
 // CONSTRUCAO DO MAPA BASEADO NA IMAGEM
 const Map = () => {
-  const imageUrl = './img/newMapaExpoDark.jpg';
+  const imageUrl = './img/mapa.jpg';
   const imageBounds = [
     [-90, -360],
     [180, 360],
@@ -55,7 +55,7 @@ const Map = () => {
           maxZoom={maxZoom}
           initialZoom={initialZoom}
         />
-        <PinPalcoLaia latitude={'67.000'} longitude={'-126.000'} />
+        <PinPalcoLaia latitude={'65.000'} longitude={'-80.000'} />
       </MapContainer>
     </div>
   );
