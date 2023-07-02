@@ -1,11 +1,11 @@
 import { icon } from 'leaflet';
 import { useState, useEffect } from 'react';
 import { Marker, Popup } from 'react-leaflet';
-import pinPalcoLaiaIcon from '/img/PalcoLaia/laia-icon.png';
+import pinPalcoLaiaIcon from '/img/Rodeio/rodeio-icon.png';
 import './pinpalcolaia.css';
 import PalcoLaia from '../../ModelProgramacaoExpo/PalcoLaia';
 
-const PinPalcoLaia = ({ latitude, longitude }) => {
+const PinRodeio = ({ latitude, longitude }) => {
   useEffect(() => {
     const pin = document.querySelector('.leaflet-marker-icon')
     pin.addEventListener('click', () => {
@@ -94,4 +94,4 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
   );
 };
 
-export default PinPalcoLaia;
+export default PinRodeio;

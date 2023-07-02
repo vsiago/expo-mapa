@@ -207,6 +207,7 @@ body {
   z-index: 999;
 }
 
+/* icon location config */
 img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
-  margin-top: -87px !important;
+  margin-top: -94px !important;
 }
