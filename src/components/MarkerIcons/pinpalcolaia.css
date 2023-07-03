@@ -130,6 +130,7 @@ body {
 
 .leaflet-popup-content main footer nav {
   position: relative;
+  overflow-x: scroll;
 }
 
 .leaflet-popup-content main footer h3 {
@@ -280,6 +281,7 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
 
   .leaflet-popup-content main footer {
     height: 36%;
+    overflow-x: scroll;
   }
 
   .leaflet-popup-content main footer nav ul {
