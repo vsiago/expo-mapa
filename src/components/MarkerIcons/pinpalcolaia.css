@@ -192,16 +192,16 @@ body {
 .btnHomePrgramacao {
   width: 65px;
   height: 65px;
-  background-color: #fff;
-  border-radius: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  top: 8px;
+  right: 8px;
+  background: #000000;
   position: absolute;
-  top: 20px;
-  right: 20px;
-  cursor: pointer;
-  z-index: 999;
+  background-image: url('./home-icon.png');
+  background-size: 25px;
+  background-repeat: no-repeat;
+  background-position: center;
+  border-radius: 6px;
+  opacity: .3;
   pointer-events: auto;
 }
 
@@ -229,8 +229,16 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
     height: 45px;
     top: 6px;
     right: 6px;
-    background: #00000039;
+    background: #000000;
+    position: absolute;
+    background-image: url('./home-icon.png');
+    background-size: 25px;
+    background-repeat: no-repeat;
+    background-position: center;
+    opacity: .3;
   }
+
+
 
 
   .leaflet-popup-content main {
@@ -246,7 +254,6 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
     position: relative;
     text-align: center;
   }
-
 
 
   .leaflet-popup-content main header .img-container {

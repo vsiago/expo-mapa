@@ -76,7 +76,7 @@ const PinPalcoQuiva = ({ latitude, longitude }) => {
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
       <Popup autoPan={true}>
         <main id='bgPalcoQuiva'>
-          <div className='btnHomePrgramacao' onClick={handleClickBtnNull}>HOME</div>
+          <div className='btnHomePrgramacao' onClick={handleClickBtnNull}></div>
           {renderAtracao()}
           <footer id='footerPalcoQuiva'>
             <nav>
