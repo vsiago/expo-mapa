@@ -117,6 +117,7 @@ header .tourVirtual {
   position: absolute;
   right: 60px;
   bottom: 4px;
+  pointer-events: auto;
 }
 
 .iconArrowDown {

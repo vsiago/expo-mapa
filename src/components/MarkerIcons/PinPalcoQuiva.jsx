@@ -4,7 +4,7 @@ import { Marker, Popup } from 'react-leaflet';
 import pinPalcoLaiaIcon from '/img/PalcoQuiva/quiva-icon.png';
 import './pinpalcolaia.css';
 import './pinpalcoquiva.css';
-import PalcoLaia from '../../ModelProgramacaoExpo/PalcoLaia';
+import PalcoLaia from '../../ModelProgramacaoExpo/PalcoQuiva';
 
 const PinPalcoQuiva = ({ latitude, longitude }) => {
   useEffect(() => {
