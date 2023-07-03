@@ -1,0 +1,8 @@
+#bgAlimentacao {
+  background: rgba(40, 59, 39, 0.781);
+  border-radius: 8px;
+}
+
+#footerAlimentacao {
+  background: linear-gradient(90deg, rgba(38, 66, 37, 0) 0%, rgba(38, 66, 37, 0.5) 25%, rgb(38, 57, 39) 50%, rgba(40, 75, 37, 0.5) 75%, rgba(37, 66, 38, 0) 100%);
+}
