@@ -228,8 +228,8 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
     width: 45px;
     height: 45px;
     top: 6px;
-    left: 6px;
-    background: #142432;
+    right: 6px;
+    background: #00000039;
   }
 
 
