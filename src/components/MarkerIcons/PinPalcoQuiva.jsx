@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import pinPalcoLaiaIcon from '/img/PalcoQuiva/quiva-icon.png';
 import './pinpalcolaia.css';
+import './pinpalcoquiva.css';
 import PalcoLaia from '../../ModelProgramacaoExpo/PalcoLaia';
 
 const PinPalcoQuiva = ({ latitude, longitude }) => {
@@ -74,10 +75,10 @@ const PinPalcoQuiva = ({ latitude, longitude }) => {
   return (
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
       <Popup autoPan={true}>
-        <main>
+        <main id='bgPalcoQuiva'>
           <div className='btnHomePrgramacao' onClick={handleClickBtnNull}>HOME</div>
           {renderAtracao()}
-          <footer>
+          <footer id='footerPalcoQuiva'>
             <nav>
               <h3>TODAS AS ATRAÇÕES:</h3>
               <ul className='navAtracoes'>

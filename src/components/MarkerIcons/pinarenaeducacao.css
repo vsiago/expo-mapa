@@ -1,0 +1,8 @@
+#bgArenaEducacao {
+  background: rgba(28, 69, 79, 0.781);
+  border-radius: 8px;
+}
+
+#footerArenaEducacao {
+  background: linear-gradient(90deg, rgba(23, 88, 78, 0) 0%, rgba(22, 80, 80, 0.5) 25%, rgb(28, 51, 45) 50%, rgba(22, 78, 75, 0.5) 75%, rgba(24, 70, 75, 0) 100%);
+}

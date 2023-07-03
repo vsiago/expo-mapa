@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import pinPalcoLaiaIcon from '/img/MariaBonita/maria-icon.png';
 import './pinpalcolaia.css';
-import PalcoLaia from '../../ModelProgramacaoExpo/PalcoLaia';
+import './pinmariabonita.css';
+import PalcoLaia from '../../ModelProgramacaoExpo/MariaBonita';
 
 const PinMariaBonita = ({ latitude, longitude }) => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const PinMariaBonita = ({ latitude, longitude }) => {
   const customIconPalcoLaia = icon({
     iconUrl: pinPalcoLaiaIcon,
     iconSize: [77, 114],
+    popupAnchor: [200, 0]
   });
 
   const coordPinPalcoLaia = [latitude, longitude];
@@ -73,10 +75,10 @@ const PinMariaBonita = ({ latitude, longitude }) => {
   return (
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
       <Popup autoPan={true}>
-        <main>
+        <main id='bgMariaBonita'>
           <div className='btnHomePrgramacao' onClick={handleClickBtnNull}>HOME</div>
           {renderAtracao()}
-          <footer>
+          <footer id='footerMariaBonita'>
             <nav>
               <h3>TODAS AS ATRAÇÕES:</h3>
               <ul className='navAtracoes'>

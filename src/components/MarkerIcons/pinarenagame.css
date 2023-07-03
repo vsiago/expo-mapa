@@ -1,0 +1,8 @@
+#bgArenaGame {
+  background: rgba(26, 41, 97, 0.781);
+  border-radius: 8px;
+}
+
+#footerArenaGame {
+  background: linear-gradient(90deg, rgba(23, 52, 88, 0) 0%, rgba(22, 48, 80, 0.5) 25%, rgb(17, 31, 63) 50%, rgba(22, 34, 78, 0.5) 75%, rgba(24, 27, 75, 0) 100%);
+}

@@ -22,13 +22,12 @@ body {
   max-width: 1000px;
   max-height: 573px;
   height: 75vh;
-  background-color: #253242;
   border-radius: 0;
   display: flex;
   justify-content: center;
   align-items: center;
   color: white;
-  background: rgba(37, 50, 66, .83);
+  background: rgba(63, 63, 63, 0);
   box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.7);
   backdrop-filter: blur(13.5px);
   -webkit-backdrop-filter: blur(13.5px);
@@ -36,26 +35,9 @@ body {
   border: 3px solid rgba(162, 191, 218, 0.233);
   -moz-box-shadow: -1px 39px 55px 0px rgba(37, 50, 66, 1);
   box-shadow: -1px 39px 55px 0px rgba(37, 50, 66, .5);
-}
-
-
-/* POSICIONAMENTO DO POPUP */
-.positionPopupPalcoLaia {
-  margin-top: 200px;
-  background-color: blue !important;
-}
-
-/* .leaflet-popup-content-wrapper .leaflet-popup-tip-container main header .img-container > img[src="palco-laia.png"] */
-
-.leaflet-popup-content-wrapper:nth-child(2){
-  width: 80vw;
-  min-height: 550px;
-  height: 70vh;
-  margin-left: 20px;
-  margin-top: 200px;
   pointer-events: none;
-  background-color: red;
 }
+
 
 .leaflet-popup-close-button {
   display: none !important;
@@ -137,7 +119,6 @@ body {
   align-items: center;
   height: 35%;
   width: 100%;
-  background: linear-gradient(90deg, rgba(37, 50, 66, 0) 0%, rgba(37, 50, 66, 0.5) 25%, rgba(37, 50, 66, 1) 50%, rgba(37, 50, 66, 0.5) 75%, rgba(37, 50, 66, 0) 100%);
   z-index: 20;
   padding-top: 30px;
   overflow-x: scroll !important;
@@ -183,6 +164,7 @@ body {
   background-color: #C7CBD8;
   transition: .4s;
   opacity: .7;
+  pointer-events: auto !important;
 }
 
 /* estados do botão */
@@ -310,4 +292,15 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
 
   /* Mais estilos específicos para telas maiores */
   /* ... */
+}
+
+/* DO COMPONENTE */
+
+#bgPalcoLaia {
+  background: rgba(25, 37, 60, 0.781);
+  border-radius: 8px;
+}
+
+#footerPalcoLaia {
+  background: linear-gradient(90deg, rgba(37, 50, 66, 0) 0%, rgba(37, 50, 66, 0.5) 25%, rgba(37, 50, 66, 1) 50%, rgba(37, 50, 66, 0.5) 75%, rgba(37, 50, 66, 0) 100%);
 }

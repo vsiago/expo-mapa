@@ -1,0 +1,8 @@
+#bgRodeio {
+  background: rgba(46, 32, 20, 0.834);
+  border-radius: 8px;
+}
+
+#footerRodeio {
+  background: linear-gradient(90deg, rgba(66, 50, 37, 0) 0%, rgba(66, 55, 37, 0.5) 25%, rgb(75, 52, 34) 50%, rgba(66, 50, 37, 0.5) 75%, rgba(66, 53, 37, 0) 100%);
+}

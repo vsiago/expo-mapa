@@ -3,7 +3,8 @@ import { useState, useEffect } from 'react';
 import { Marker, Popup } from 'react-leaflet';
 import pinPalcoLaiaIcon from '/img/ArenaGame/game-icon.png';
 import './pinpalcolaia.css';
-import PalcoLaia from '../../ModelProgramacaoExpo/PalcoLaia';
+import './pinarenagame.css'
+import PalcoLaia from '../../ModelProgramacaoExpo/ArenaEducacao';
 
 const PinArenaGame = ({ latitude, longitude }) => {
   useEffect(() => {
@@ -16,6 +17,7 @@ const PinArenaGame = ({ latitude, longitude }) => {
   const customIconPalcoLaia = icon({
     iconUrl: pinPalcoLaiaIcon,
     iconSize: [77, 114],
+    popupAnchor: [-260, 50]
   });
 
   const coordPinPalcoLaia = [latitude, longitude];
@@ -73,10 +75,10 @@ const PinArenaGame = ({ latitude, longitude }) => {
   return (
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
       <Popup autoPan={true}>
-        <main>
+        <main id='bgArenaGame'>
           <div className='btnHomePrgramacao' onClick={handleClickBtnNull}>HOME</div>
           {renderAtracao()}
-          <footer>
+          <footer id='footerArenaGame'>
             <nav>
               <h3>TODAS AS ATRAÇÕES:</h3>
               <ul className='navAtracoes'>

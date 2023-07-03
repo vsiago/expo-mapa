@@ -1,0 +1,8 @@
+#bgParque {
+  background: rgba(46, 20, 43, 0.781);
+  border-radius: 8px;
+}
+
+#footerParque {
+  background: linear-gradient(90deg, rgba(65, 37, 66, 0) 0%, rgba(66, 37, 59, 0.5) 25%, rgb(54, 34, 75) 50%, rgba(62, 37, 75, 0.5) 75%, rgba(66, 37, 57, 0) 100%);
+}
