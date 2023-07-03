@@ -130,7 +130,6 @@ body {
 
 .leaflet-popup-content main footer nav {
   position: relative;
-  overflow-x: scroll;
 }
 
 .leaflet-popup-content main footer h3 {
