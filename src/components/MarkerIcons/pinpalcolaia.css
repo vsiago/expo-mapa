@@ -81,10 +81,6 @@ body {
 }
 
 .leaflet-popup-content main header .img-container {
-  height: 50%;
-}
-
-.leaflet-popup-content main header .img-container {
   width: 50%;
   /* border: solid 1px violet; */
   display: flex;
