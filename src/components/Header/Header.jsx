@@ -32,10 +32,10 @@ export default function Header({atualizarEstadoFilho}) {
   };
 
   return (
-    <header className={`headerMain ${navbarShow ? 'headerMainBGShow' : ''}`}>
+    <header onClick={toggleMenu} className={`headerMain ${navbarShow ? 'headerMainBGShow' : ''}`}>
         <p className={`tourVirtual ${navbarShow ? 'tourVirtualPDelay' : ''}`}>{navbarShow ? 'explore locais' : 'Tour Virtual'}</p>
       <nav className={`header ${isOpen ? 'open' : ''}`}>
-        <Link to="https://expo-mapa.vercel.app">
+        <Link to="./">
           <img
             className="logo-expo"
             src="./img/logo-expo-2023.svg"
