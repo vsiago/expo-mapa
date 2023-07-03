@@ -30,7 +30,7 @@ const Home = () => {
           <div className={`sombra ${estadoFilho ? 'sombraShow' : ''}`} style={{pointerEvents: !estadoFilho ? 'none' : 'auto'}}></div>
         </>
       ) : (
-        <Header atualizarEstadoFilho={atualizarEstadoFilho} />
+        <Header id='headerEventNone' atualizarEstadoFilho={atualizarEstadoFilho} />
       )}
       <Map /> 
     </div>
