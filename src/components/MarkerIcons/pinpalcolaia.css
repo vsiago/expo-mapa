@@ -201,12 +201,104 @@ body {
   align-items: center;
   position: absolute;
   top: 20px;
-  left: 20px;
+  right: 20px;
   cursor: pointer;
   z-index: 999;
+  pointer-events: auto;
 }
 
 /* icon location config */
 img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
   margin-top: -94px !important;
+}
+
+
+
+/* Estilos para telas com largura máxima de 480px */
+@media (max-width: 480px) {
+  body {
+    font-size: 14px;
+    text-align: center;
+  }
+
+  h1 {
+    font-size: 2rem !important;
+
+  }
+
+  .btnHomePrgramacao {
+    width: 45px;
+    height: 45px;
+    top: 6px;
+    left: 6px;
+    background: #142432;
+  }
+
+  .leaflet-popup-content-wrapper {
+    width: 80vw;
+    min-height: 550px;
+    height: 70vh;
+    margin-left: 20px;
+    margin-top: 200px;
+    pointer-events: none;
+  }
+
+  .leaflet-popup-content main {
+    padding: 0;
+  }
+
+  .leaflet-popup-content header {
+    display: flex;
+    flex-direction: column;
+    /* border: solid 1px green; */
+    width: 100%;
+    height: 70%;
+    position: relative;
+    text-align: center;
+  }
+
+
+
+  .leaflet-popup-content main header .img-container {
+    width: 100%;
+    height: 200px!important;
+    /* border: solid 2px red; */
+  }
+
+  .leaflet-popup-content main header .containerIntro {
+    
+    width: 100%;
+    padding: 0;
+  }
+
+  .leaflet-popup-content main header .containerIntro p {
+    font-size: 14px;
+    width: 100%;
+    padding: 0 35px;
+    padding: 0;
+    margin: 0;
+  }
+
+  .leaflet-popup-content main footer {
+    height: 36%;
+  }
+
+  .leaflet-popup-content main footer nav ul {
+    margin-left: -30px;
+    pointer-events: auto!important;
+  }
+  .leaflet-popup-content main footer nav ul li{
+    pointer-events: auto!important;
+  }
+
+}
+
+/* Estilos para telas com largura mínima de 768px */
+@media (min-width: 768px) {
+  body {
+    font-size: 18px;
+  }
+
+  /* Mais estilos específicos para telas maiores */
+  /* ... */
 }
