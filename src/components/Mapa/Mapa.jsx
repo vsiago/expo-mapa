@@ -64,7 +64,7 @@ const Map = () => {
           maxZoom={maxZoom}
           initialZoom={initialZoom}
         />
-        <PinPalcoLaia latitude={'65.000'} longitude={'-80.000'} />
+        <PinPalcoLaia className='pin-palco-laia' latitude={'65.000'} longitude={'-80.000'} />
         {/* <PinPalcoLaia latitude={'46.000'} longitude={'-70.000'} /> */}
         <PinParque latitude={'32.000'} longitude={'105.000'} />
         <PinPracaAlimentacao latitude={'-26.000'} longitude={'55.000'} /> // Praca de alimentacao

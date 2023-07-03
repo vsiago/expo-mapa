@@ -26,7 +26,7 @@ const Home = () => {
     <div className="home-container">
       {isMobile ? (
         <>
-          <header>Header para celular</header>
+          {/* <header>Header para celular</header> */}
           <div className={`sombra ${estadoFilho ? 'sombraShow' : ''}`} style={{pointerEvents: !estadoFilho ? 'none' : 'auto'}}></div>
         </>
       ) : (
