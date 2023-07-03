@@ -12,6 +12,7 @@ import PinArenaGame from '../MarkerIcons/PinArenaGame';
 import PinArenaEducacao from '../MarkerIcons/PinArenaEducacao';
 import PinPracaAlimentacao from '../MarkerIcons/PinAlimentacao';
 import PinMariaBonita from '../MarkerIcons/PinMariaBonita';
+import PinArenaCultural from '../MarkerIcons/PinArenaCultural';
 
 // CONSTRUCAO DO MAPA BASEADO NA IMAGEM
 const Map = () => {
@@ -67,14 +68,15 @@ const Map = () => {
         <PinPalcoLaia className='pin-palco-laia' latitude={'65.000'} longitude={'-80.000'} />
         {/* <PinPalcoLaia latitude={'46.000'} longitude={'-70.000'} /> */}
         <PinParque latitude={'32.000'} longitude={'105.000'} />
-        <PinPracaAlimentacao latitude={'-26.000'} longitude={'55.000'} /> // Praca de alimentacao
-        <PinArenaGame latitude={'-15.000'} longitude={'136.000'} /> // Arena Game
-        <PinArenaEducacao latitude={'-39.000'} longitude={'170.000'} /> // Arena Educacao
+        <PinPracaAlimentacao latitude={'-26.000'} longitude={'55.000'} />
+        <PinArenaGame latitude={'-15.000'} longitude={'136.000'} />
+        <PinArenaEducacao latitude={'-39.000'} longitude={'170.000'} />
+        <PinArenaCultural latitude={'-63.000'} longitude={'135.000'} />
         <PinFazendinha latitude={'-60.000'} longitude={'-135.000'} />
         <PinRodeio latitude={'36.000'} longitude={'-110.000'} />
         <PinCamaroteGreyGoose latitude={'70.000'} longitude={'-30.000'} />
         <PinPalcoQuiva latitude={'-77.000'} longitude={'104.000'} />
-        <PinMariaBonita latitude={'6.000'} longitude={'-89.000'} /> // Maria Bonita
+        <PinMariaBonita latitude={'6.000'} longitude={'-89.000'} />
       </MapContainer>
     </div>
   );
