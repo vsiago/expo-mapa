@@ -64,7 +64,10 @@ header .tourVirtual {
   visibility: hidden;
   transition: .5s;
   background-color: red;
-
+  white-space: nowrap;
+  overflow-x: scroll;
+  pointer-events: auto;
+  padding-left: 280px;
 }
 
 /* Btn Avaliacao */
