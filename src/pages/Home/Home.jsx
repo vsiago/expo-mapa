@@ -20,8 +20,6 @@ const Home = () => {
     setEstadoFilho(novoEstado);
   };
 
-  console.log(estadoFilho)
-
   return (
     <div className="home-container">
       {isMobile ? (

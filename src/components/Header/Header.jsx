@@ -1,5 +1,5 @@
 import React from 'react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import './header.css';
 import { Link } from 'react-router-dom';
 import buttonClickSound from '/sound/ui_tap-variant-01.wav';
@@ -9,6 +9,25 @@ export default function Header({atualizarEstadoFilho}) {
   const [isOpen, setIsOpen] = useState(false);
   const [logoShow, setLogoHidden] = useState(true);
   const [navbarShow, setNavbarShow] = useState(false);
+
+  useEffect(() => {
+    const pracaAlimentacao = document.querySelector('#praca-alimentacao');
+  
+    const handleClick = () => {
+      const caminhoIMG = '/img/PracaAlimentacao/alimentacao-icon.png';
+      const iconPracaAlimentacao = document.querySelector('img[src="' + caminhoIMG + '"]');
+      setTimeout(() => {
+        iconPracaAlimentacao.click();
+      },100)
+    };
+  
+    pracaAlimentacao.addEventListener('click', handleClick);
+  
+    return () => {
+      pracaAlimentacao.removeEventListener('click', handleClick);
+    };
+  }, []);
+  
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);
@@ -44,21 +63,40 @@ export default function Header({atualizarEstadoFilho}) {
         </Link>
         <ul className={`navbar ${navbarShow ? 'navbarShow' : ''}`}>
           <li>
-            <a>Rodeio</a>
+            <a id='palco-principal'>Palco Laiá</a>
+          </li>
+          <li>
+            <a>Palco Quiva</a>
           </li>
           <li>
             <a>Parque</a>
           </li>
           <li>
-            <a>Praca de Alimentacao</a>
+            <a>Rodeio</a>
           </li>
           <li>
-            <a>Shows</a>
+            <a id='praca-alimentacao'>Praca de Alimentacao</a>
           </li>
           <li>
-            <a>Bem-estar</a>
+            <a>Camarote</a>
           </li>
-          <Link to="/avaliacao">
+          <li>
+            <a>Forró</a>
+          </li>
+          <li>
+            <a>Educação</a>
+          </li>
+          <li>
+            <a>Cultura</a>
+          </li>
+          <li>
+            <a>Fazendinha</a>
+          </li>
+          <li>
+            <a>Game</a>
+          </li>
+        </ul>
+        <Link to="/avaliacao">
             <img
               onClick={handleButtonClick}
               className="btnAvaliacao"
@@ -66,7 +104,6 @@ export default function Header({atualizarEstadoFilho}) {
               alt="Botao Avaliacao"
             />
           </Link>
-        </ul>
         <img
           className={`logo-prefeitura ${logoShow ? 'logoToggle' : ''}`}
           src="./img/logo-expo-2023-escura.png"

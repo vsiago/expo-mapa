@@ -23,7 +23,7 @@ const Map = () => {
   ];
   const minZoom = 2;
   const maxZoom = 4;
-  const initialZoom = 1;
+  const initialZoom = minZoom;
   const centerLatitude = 0;
   const centerLongitude = 0;
   const mapMinBounds = [
