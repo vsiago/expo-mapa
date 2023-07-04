@@ -2,6 +2,28 @@ import React, { useState } from 'react';
 import './avaliacao.css';
 import { Link } from 'react-router-dom';
 import Card from '../../components/Cards/Card';
+const { MongoClient } = require('mongodb');
+
+async function enviarDadosParaMongoDB(avaliacaoResultados) {
+  const uri = 'mongodb+srv://vsiago22:p7PBSOnMKSvJTaRn@clustermapaexpo.tqtvdso.mongodb.net/?retryWrites=true&w=majority'; // Insira a URI de conexão do seu cluster MongoDB aqui
+
+  const client = new MongoClient(uri);
+
+  try {
+    await client.connect();
+
+    const database = client.db('ExpoMapa2023'); // Insira o nome do seu banco de dados aqui
+    const collection = database.collection('avaliacao'); // Insira o nome da sua coleção aqui
+
+    // Insere os dados no banco de dados
+    const result = await collection.insertOne(avaliacaoResultados);
+    console.log('Dados inseridos no MongoDB:', result.insertedId);
+  } finally {
+    await client.close();
+  }
+}
+
+
 
 export default function Avaliacao() {
   const [avaliacaoResultados, setAvaliacaoResultados] = useState({});
@@ -27,6 +49,7 @@ export default function Avaliacao() {
       setExibirAlertas(false);
       setEnviarAvaliacao(true);
       console.log(avaliacaoResultados);
+      enviarDadosParaMongoDB(avaliacaoResultados)
     }
   };
 
