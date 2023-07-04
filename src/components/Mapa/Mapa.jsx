@@ -16,12 +16,12 @@ import PinArenaCultural from '../MarkerIcons/PinArenaCultural';
 
 // CONSTRUCAO DO MAPA BASEADO NA IMAGEM
 const Map = () => {
-  const imageUrl = 'https://res.cloudinary.com/dbjzaupe7/image/upload/v1688239136/expo-mapa/mapa_oryswt.jpg';
+  const imageUrl = 'https://res.cloudinary.com/dbjzaupe7/image/upload/v1688479819/expo-mapa/mapa_2_op1asu.jpg';
   const imageBounds = [
     [-90, -360],
     [180, 360],
   ];
-  const minZoom = 2;
+  const minZoom = 1.6;
   const maxZoom = 4;
   const initialZoom = minZoom;
   const centerLatitude = 0;
@@ -66,7 +66,7 @@ const Map = () => {
           initialZoom={initialZoom}
         />
         <PinPalcoLaia className='pin-palco-laia' latitude={'65.000'} longitude={'-80.000'} />
-        {/* <PinPalcoLaia latitude={'46.000'} longitude={'-70.000'} /> */}
+        <PinCamaroteGreyGoose latitude={'46.000'} longitude={'-70.000'} />
         <PinParque latitude={'32.000'} longitude={'105.000'} />
         <PinPracaAlimentacao latitude={'-26.000'} longitude={'55.000'} />
         <PinArenaGame latitude={'-15.000'} longitude={'136.000'} />
@@ -74,7 +74,7 @@ const Map = () => {
         <PinArenaCultural latitude={'-63.000'} longitude={'135.000'} />
         <PinFazendinha latitude={'-60.000'} longitude={'-135.000'} />
         <PinRodeio latitude={'36.000'} longitude={'-110.000'} />
-        <PinCamaroteGreyGoose latitude={'70.000'} longitude={'-30.000'} />
+        {/* <PinCamaroteGreyGoose latitude={'70.000'} longitude={'-30.000'} /> */}
         <PinPalcoQuiva latitude={'-77.000'} longitude={'104.000'} />
         <PinMariaBonita latitude={'6.000'} longitude={'-89.000'} />
       </MapContainer>
