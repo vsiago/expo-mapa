@@ -40,11 +40,17 @@ export default function Avaliacao() {
             alt="Logo Expo 2023"
           />
         </h1>
-        <h1 className="titleOpiniao">Dê sua opinião sobre a Expo</h1>
-        <p className="subTitleOpniao">Sua resposta é muito importante para nós</p>
+        {enviarAvaliacao ? (
         <Link to="/home">
           <img className="btnVoltar" src="./img/btnVoltar.png" alt="" />
-        </Link>
+        </Link>):
+        (
+          <>
+          <h1 className="titleOpiniao">Dê sua opinião sobre a Expo</h1>
+          <p className="subTitleOpniao">Sua resposta é muito importante para nós</p>
+        </>
+        )}
+
       </header>
       <section>
         {enviarAvaliacao ? (
