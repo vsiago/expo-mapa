@@ -38,45 +38,59 @@ export default function Header({ atualizarEstadoFilho }) {
   useEffect(() => {
     switch (selectedButton) {
       case 'palco-laia':
-        // Lógica para o botão "Palco Laiá"
-        const iconPalcoLaia = document.querySelector('img[src="' + '/img/PalcoLaia/laia-icon.png' + '"]');
         setTimeout(() => {
-          iconPalcoLaia.click();
+          document.querySelector('img[src="' + '/img/PalcoLaia/laia-icon.png' + '"]').click();
         }, 100);
         break;
       case 'palco-quiva':
-        // Lógica para o botão "Palco Quiva"
+        setTimeout(() => {
+          document.querySelector('img[src="' + '/img/PalcoQuiva/quiva-icon.png' + '"]').click();
+        }, 100);
         break;
       case 'parque':
-        // Lógica para o botão "Parque"
+        setTimeout(() => {
+          document.querySelector('img[src="' + '/img/Parque/parque-icon.png' + '"]').click();
+        }, 100);
         break;
       case 'rodeio':
-        // Lógica para o botão "Rodeio"
+        setTimeout(() => {
+          document.querySelector('img[src="' + '/img/Rodeio/rodeio-icon.png' + '"]').click();
+        }, 100);
         break;
       case 'praca-alimentacao':
-        // Lógica para o botão "Praca de Alimentacao"
-        const iconPracaAlimentacao = document.querySelector('img[src="' + '/img/PracaAlimentacao/alimentacao-icon.png' + '"]');
         setTimeout(() => {
-          iconPracaAlimentacao.click();
+          document.querySelector('img[src="' + '/img/PracaAlimentacao/alimentacao-icon.png' + '"]').click();
         }, 100);
         break;
       case 'camarote':
-        // Lógica para o botão "Camarote"
+        setTimeout(() => {
+          document.querySelector('img[src="' + '/img/CamaroteGreyGoose/grey-icon.png' + '"]').click();
+        }, 100);
         break;
       case 'forro':
-        // Lógica para o botão "Forró"
+        setTimeout(() => {
+          document.querySelector('img[src="' + '/img/MariaBonita/maria-icon.png' + '"]').click();
+        }, 100);
         break;
       case 'educacao':
-        // Lógica para o botão "Educação"
+        setTimeout(() => {
+          document.querySelector('img[src="' + '/img/ArenaEducacao/edu-icon.png' + '"]').click();
+        }, 100);
         break;
       case 'cultura':
-        // Lógica para o botão "Cultura"
+        setTimeout(() => {
+          document.querySelector('img[src="' + '/img/ArenaCultural/cultural-icon.png' + '"]').click();
+        }, 100);
         break;
       case 'fazendinha':
-        // Lógica para o botão "Fazendinha"
+        setTimeout(() => {
+          document.querySelector('img[src="' + '/img/Fazendinha/fazendinha-icon.png' + '"]').click();
+        }, 100);
         break;
       case 'game':
-        // Lógica para o botão "Game"
+        setTimeout(() => {
+          document.querySelector('img[src="' + '/img/ArenaGame/game-icon.png' + '"]').click();
+        }, 100);
         break;
       default:
         // Lógica padrão quando nenhum botão está selecionado

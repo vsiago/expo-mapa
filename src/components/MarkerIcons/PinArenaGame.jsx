@@ -4,7 +4,7 @@ import { Marker, Popup } from 'react-leaflet';
 import pinPalcoLaiaIcon from '/img/ArenaGame/game-icon.png';
 import './pinpalcolaia.css';
 import './pinarenagame.css'
-import PalcoLaia from '../../ModelProgramacaoExpo/ArenaEducacao';
+import PalcoLaia from '../../ModelProgramacaoExpo/ArenaGame';
 
 const PinArenaGame = ({ latitude, longitude }) => {
   useEffect(() => {

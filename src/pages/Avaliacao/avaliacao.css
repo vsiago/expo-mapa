@@ -85,3 +85,15 @@ footer {
   justify-content: center;
   align-items: center;
 }
+
+.alertaVisual {
+  background-color: yellow;
+  opacity: .7;
+  color: #000;
+  margin: 0 3px;
+  padding: 3px;
+  height: 30px;
+  position: relative;
+  border-radius: 0 0 8px 8px;
+  top: -32px;
+}

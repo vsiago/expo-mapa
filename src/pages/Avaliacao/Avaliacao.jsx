@@ -5,6 +5,8 @@ import Card from '../../components/Cards/Card';
 
 export default function Avaliacao() {
   const [avaliacaoResultados, setAvaliacaoResultados] = useState({});
+  const [exibirAlertas, setExibirAlertas] = useState(false);
+  const [enviarAvaliacao, setEnviarAvaliacao] = useState(false);
 
   const handleAvaliacaoButtonClick = (tipoDeArea, button) => {
     setAvaliacaoResultados((prevResults) => ({
@@ -14,24 +16,18 @@ export default function Avaliacao() {
   };
 
   const handleEnviarAvaliacaoClick = () => {
-    if(avaliacaoResultados.Segurança === undefined) {
-     console.log('Avalie a nossa seguranca');
+    if (
+      avaliacaoResultados.Segurança === undefined ||
+      avaliacaoResultados.Alimentação === undefined ||
+      avaliacaoResultados.Organização === undefined ||
+      avaliacaoResultados.Atrações === undefined
+    ) {
+      setExibirAlertas(true);
+    } else {
+      setExibirAlertas(false);
+      setEnviarAvaliacao(true);
+      console.log(avaliacaoResultados);
     }
-    if(avaliacaoResultados.Alimentação === undefined) {
-     console.log('Avalie a nossa alimentacao');
-    }
-    if(avaliacaoResultados.Organização === undefined) {
-      console.log('Avalie a nossa organização');
-     }
-     if(avaliacaoResultados.Atrações === undefined) {
-      console.log('Avalie as nossas atrações');
-     }
-     if(avaliacaoResultados.Segurança &&
-        avaliacaoResultados.Alimentação &&
-        avaliacaoResultados.Organização &&
-        avaliacaoResultados.Atrações ) {
-          console.log(avaliacaoResultados);
-     }
   };
 
   return (
@@ -47,46 +43,75 @@ export default function Avaliacao() {
         <h1 className="titleOpiniao">Dê sua opinião sobre a Expo</h1>
         <p className="subTitleOpniao">Sua resposta é muito importante para nós</p>
         <Link to="/home">
-          <img
-            className="btnVoltar"
-            src="./img/btnVoltar.png"
-            alt=""
-          />
+          <img className="btnVoltar" src="./img/btnVoltar.png" alt="" />
         </Link>
       </header>
       <section>
-        <div className="cardsAvaliacao">
-          <div className="cardSeguraca card">
-            <Card
-              TipoDeArea="Segurança"
-              onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
-            />
+        {enviarAvaliacao ? (
+          <p className="mensagemAgradecimento">Obrigado pela sua avaliação!</p>
+        ) : (
+          <div className="cardsAvaliacao">
+            <div className="cardSeguraca card">
+              <Card
+                TipoDeArea="Segurança"
+                onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
+              />
+              {exibirAlertas &&
+                avaliacaoResultados.Segurança === undefined && (
+                  <p className="alertaVisual">
+                    Avalie a nossa <strong>segurança</strong>
+                  </p>
+                )}
+            </div>
+            <div className="cardAlimentacao card">
+              <Card
+                TipoDeArea="Alimentação"
+                onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
+              />
+              {exibirAlertas &&
+                avaliacaoResultados.Alimentação === undefined && (
+                  <p className="alertaVisual">
+                    Avalie a nossa <strong>alimentação</strong>
+                  </p>
+                )}
+            </div>
+            <div className="cardOrganizacao card">
+              <Card
+                TipoDeArea="Organização"
+                onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
+              />
+              {exibirAlertas &&
+                avaliacaoResultados.Organização === undefined && (
+                  <p className="alertaVisual">
+                    Avalie a nossa <strong>organização</strong>
+                  </p>
+                )}
+            </div>
+            <div className="cardAtracao card">
+              <Card
+                TipoDeArea="Atrações"
+                onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
+              />
+              {exibirAlertas &&
+                avaliacaoResultados.Atrações === undefined && (
+                  <p className="alertaVisual">
+                    Avalie as nossas <strong>atrações</strong>
+                  </p>
+                )}
+            </div>
           </div>
-          <div className="cardAlimentacao card">
-            <Card
-              TipoDeArea="Alimentação"
-              onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
-            />
-          </div>
-          <div className="cardOrganizacao card">
-            <Card
-              TipoDeArea="Organização"
-              onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
-            />
-          </div>
-          <div className="cardAtracao card">
-            <Card
-              TipoDeArea="Atrações"
-              onAvaliacaoButtonClick={handleAvaliacaoButtonClick}
-            />
-          </div>
-        </div>
-        <button className="btnEnviarAvaliacao" onClick={handleEnviarAvaliacaoClick}>
-          Enviar avaliação
-        </button>
+        )}
+        {!enviarAvaliacao && (
+          <button
+            className="btnEnviarAvaliacao"
+            onClick={handleEnviarAvaliacaoClick}
+          >
+            Enviar avaliação
+          </button>
+        )}
       </section>
       <footer>
-        <img className="scLogos" src="../img/scLogos.png" alt="" />
+        {/* <img className="scLogos" src="../img/scLogos.png" alt="" /> */}
       </footer>
     </main>
   );
