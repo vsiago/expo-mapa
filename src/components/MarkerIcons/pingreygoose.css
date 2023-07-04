@@ -7,3 +7,9 @@
   background: linear-gradient(90deg, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 25%, rgb(53, 56, 58) 50%, rgba(0, 0, 0, 0.5) 75%, rgba(0, 0, 0, 0) 100%);
 
 }
+
+/* THUMB GREYGOOSE */
+
+#thumb-greygoose {
+  width: 60%;
+}

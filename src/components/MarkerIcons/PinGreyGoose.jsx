@@ -49,7 +49,7 @@ const PinCamaroteGreyGoose = ({ latitude, longitude }) => {
       return (
         <header className='fade-in'>
           <div className='img-container'>
-            <img src={itemSelecionado.URLImg} alt='' />
+            <img className='fade-in' src={itemSelecionado.URLImg} alt='' />
           </div>
           <div className='containerIntro'>
             <h1>{itemSelecionado.name}</h1>
@@ -60,7 +60,7 @@ const PinCamaroteGreyGoose = ({ latitude, longitude }) => {
     } else {
       return (
         <header className='fade-in'>
-          <div className='img-container'>
+          <div id='thumb-greygoose' className='img-container fade in'>
             <img src={PalcoLaia.URLImg} alt='' />
           </div>
           <div className='containerIntro'>
