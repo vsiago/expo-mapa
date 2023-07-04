@@ -8,4 +8,8 @@ export default defineConfig({
   server: {
     host: true,
   },
+  optimizeDeps: {
+    exclude: ['mongodb'],
+  },
+
 });

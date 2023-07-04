@@ -2,28 +2,21 @@ import React, { useState } from 'react';
 import './avaliacao.css';
 import { Link } from 'react-router-dom';
 import Card from '../../components/Cards/Card';
-const { MongoClient } = require('mongodb');
 
-async function enviarDadosParaMongoDB(avaliacaoResultados) {
-  const uri = 'mongodb+srv://vsiago22:p7PBSOnMKSvJTaRn@clustermapaexpo.tqtvdso.mongodb.net/?retryWrites=true&w=majority'; // Insira a URI de conexão do seu cluster MongoDB aqui
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
-  const client = new MongoClient(uri);
+const firebaseConfig = {
+  apiKey: "AIzaSyAkRv8a8bgp7ccJbtQeObcpXvx2ZMX9K7w",
+  authDomain: "expomapa2023.firebaseapp.com",
+  projectId: "expomapa2023",
+  storageBucket: "expomapa2023.appspot.com",
+  messagingSenderId: "207041523524",
+  appId: "1:207041523524:web:47d9135d91174801d7f111"
+};
 
-  try {
-    await client.connect();
-
-    const database = client.db('ExpoMapa2023'); // Insira o nome do seu banco de dados aqui
-    const collection = database.collection('avaliacao'); // Insira o nome da sua coleção aqui
-
-    // Insere os dados no banco de dados
-    const result = await collection.insertOne(avaliacaoResultados);
-    console.log('Dados inseridos no MongoDB:', result.insertedId);
-  } finally {
-    await client.close();
-  }
-}
-
-
+// Inicialize o Firebase
+firebase.initializeApp(firebaseConfig);
 
 export default function Avaliacao() {
   const [avaliacaoResultados, setAvaliacaoResultados] = useState({});
@@ -49,7 +42,16 @@ export default function Avaliacao() {
       setExibirAlertas(false);
       setEnviarAvaliacao(true);
       console.log(avaliacaoResultados);
-      enviarDadosParaMongoDB(avaliacaoResultados)
+      const db = firebase.firestore();
+      db.collection("avaliacoes")
+        .add(avaliacaoResultados)
+        .then(() => {
+          setEnviarAvaliacao(true);
+          console.log("Resultados da avaliação salvos no Firestore");
+        })
+        .catch((error) => {
+          console.error("Erro ao salvar resultados da avaliação:", error);
+        });
     }
   };
 
@@ -64,16 +66,15 @@ export default function Avaliacao() {
           />
         </h1>
         {enviarAvaliacao ? (
-        <Link to="/home">
-          <img className="btnVoltar" src="./img/btnVoltar.png" alt="" />
-        </Link>):
-        (
+          <Link to="/home">
+            <img className="btnVoltar" src="./img/btnVoltar.png" alt="" />
+          </Link>
+        ) : (
           <>
-          <h1 className="titleOpiniao">Dê sua opinião sobre a Expo</h1>
-          <p className="subTitleOpniao">Sua resposta é muito importante para nós</p>
-        </>
+            <h1 className="titleOpiniao">Dê sua opinião sobre a Expo</h1>
+            <p className="subTitleOpniao">Sua resposta é muito importante para nós</p>
+          </>
         )}
-
       </header>
       <section>
         {enviarAvaliacao ? (
