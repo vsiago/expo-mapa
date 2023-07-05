@@ -79,7 +79,7 @@ body {
 }
 
 .leaflet-popup-content main header .img-container {
-  width: 50%;
+  width: 40%;
   /* border: solid 1px violet; */
   display: flex;
   justify-content: center;
@@ -99,7 +99,7 @@ body {
 }
 
 .leaflet-popup-content main header .containerIntro h1 {
-  font-size: 4.3rem;
+  font-size: 4rem;
   font-weight: 400;
 }
 
@@ -108,7 +108,8 @@ body {
   width: 80%;
   font-weight: 00;
   font-family: Poppins, sans-serif;
-  color: #AAB7BF;
+  color: #fff;
+  opacity: .6;
 }
 
 /* NAV CONFIG */
@@ -135,11 +136,12 @@ body {
   font-weight: 600;
   font-size: .9rem;
   letter-spacing: 2px;
-  color: #a9b1b8;
+  color: #fff;
   margin-left: 25px;
   z-index: 2000;
   position: fixed;
   margin-top: -93px;
+  opacity: .7;
 }
 
 .leaflet-popup-content main footer .navAtracoes {
@@ -263,10 +265,10 @@ img.leaflet-marker-icon.leaflet-zoom-animated.leaflet-interactive {
   }
 
   .leaflet-popup-content main header .containerIntro {
-
     width: 100%;
     padding: 0;
   }
+
 
   .leaflet-popup-content main header .containerIntro p {
     font-size: 14px;

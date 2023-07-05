@@ -29,9 +29,9 @@ export default function Header({ atualizarEstadoFilho }) {
   };
 
   const handleButtonClick = (event) => {
-    event.stopPropagation();
     const button = event.target.dataset.button;
     setSelectedButton(button);
+    
     // audio.play();
     // Outras ações quando o botão é clicado
   };
