@@ -12,12 +12,12 @@ export default function Header({ atualizarEstadoFilho }) {
   const [selectedButton, setSelectedButton] = useState(null);
 
 
-  const toggleMenu = () => {
+  const toggleMenu = (event) => {
+    event.stopPropagation();
     setIsOpen(!isOpen);
     atualizarEstadoFilho(!isOpen);
     toggleLogoHidden();
     ToggleNavbar();
-    handleButtonClick();
   };
 
   const toggleLogoHidden = () => {
@@ -28,75 +28,78 @@ export default function Header({ atualizarEstadoFilho }) {
     setNavbarShow(!navbarShow);
   };
 
-  const handleButtonClick = () => {
+  const handleButtonClick = (event) => {
     const button = event.target.dataset.button;
     setSelectedButton(button);
-    audio.play();
+    // audio.play();
     // Outras ações quando o botão é clicado
   };
+
+  console.log(selectedButton);
+
 
   useEffect(() => {
     switch (selectedButton) {
       case 'palco-laia':
-        setTimeout(() => {
           document.querySelector('img[src="' + '/img/PalcoLaia/laia-icon.png' + '"]').click();
-        }, 100);
+          console.log('palco');
         break;
       case 'palco-quiva':
-        setTimeout(() => {
           document.querySelector('img[src="' + '/img/PalcoQuiva/quiva-icon.png' + '"]').click();
-        }, 100);
         break;
       case 'parque':
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/Parque/parque-icon.png' + '"]').click();
-        }, 100);
+          console.log('parque');
+        }, 500);
         break;
       case 'rodeio':
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/Rodeio/rodeio-icon.png' + '"]').click();
-        }, 100);
+          console.log('rodeio');
+
+        }, 500);
         break;
       case 'praca-alimentacao':
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/PracaAlimentacao/alimentacao-icon.png' + '"]').click();
-        }, 100);
+        }, 500);
         break;
       case 'camarote':
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/CamaroteGreyGoose/grey-icon.png' + '"]').click();
-        }, 100);
+        }, 500);
         break;
       case 'forro':
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/MariaBonita/maria-icon.png' + '"]').click();
-        }, 100);
+        }, 500);
         break;
       case 'educacao':
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/ArenaEducacao/edu-icon.png' + '"]').click();
-        }, 100);
+        }, 500);
         break;
       case 'cultura':
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/ArenaCultural/cultural-icon.png' + '"]').click();
-        }, 100);
+        }, 500);
         break;
       case 'fazendinha':
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/Fazendinha/fazendinha-icon.png' + '"]').click();
-        }, 100);
+        }, 500);
         break;
       case 'game':
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/ArenaGame/game-icon.png' + '"]').click();
-        }, 100);
+        }, 500);
         break;
       default:
         // Lógica padrão quando nenhum botão está selecionado
         break;
     }
-  }, [selectedButton]);
+  }, [selectedButton, setSelectedButton]);
 
   return (
     <header onClick={toggleMenu} className={`headerMain ${navbarShow ? 'headerMainBGShow' : ''}`}>

@@ -61,11 +61,15 @@ const PinRodeio = ({ latitude, longitude }) => {
       return (
         <header className='fade-in'>
           <div className='img-container'>
-            <img src={PalcoLaia.URLImg} alt='' />
+          <video id='videoRodeip' width="640" height="360" playsinline loop muted autoPlay>
+        <source src="https://tonynascimento.com.br/wp-content/themes/tony-nascimento/img/video.mp4" type="video/mp4" />
+        Seu navegador não suporta o elemento de vídeo.
+      </video>
           </div>
           <div className='containerIntro'>
-            <h1>{PalcoLaia.name}</h1>
-            <p>{PalcoLaia.description}</p>
+            <h1 >Rodeio</h1>
+            <img  src="https://tonynascimento.com.br/wp-content/themes/tony-nascimento/img/logo.png" alt="" />
+            {/* <p>{PalcoLaia.description}</p> */}
           </div>
         </header>
       );
@@ -76,6 +80,7 @@ const PinRodeio = ({ latitude, longitude }) => {
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
       <Popup autoPan={true}>
         <main id='bgRodeio'>
+
           <div className='btnHomePrgramacao' onClick={handleClickBtnNull}></div>
           {renderAtracao()}
           <footer id='footerRodeio'>
@@ -83,7 +88,7 @@ const PinRodeio = ({ latitude, longitude }) => {
               <h3>TODAS AS ATRAÇÕES:</h3>
               <ul className='navAtracoes'>
                 {PalcoLaia.atracoes.map((atracao) => (
-                  <li onClick={() => handleItemClick(atracao)} key={atracao.id}>
+                  <li onClick={() => handleItemClick(atracao)} key={atracao.name}>
                     <img src={atracao.icon} alt="" />
                   </li>
                 ))}

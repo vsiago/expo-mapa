@@ -84,7 +84,7 @@ const PinParque = ({ latitude, longitude }) => {
               <h3>TODAS AS ATRAÇÕES:</h3>
               <ul className='navAtracoes'>
                 {PalcoLaia.atracoes.map((atracao) => (
-                  <li onClick={() => handleItemClick(atracao)} key={atracao.id}>
+                  <li onClick={() => handleItemClick(atracao)} key={atracao.name}>
                     <img src={atracao.icon} alt="" />
                   </li>
                 ))}
