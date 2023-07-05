@@ -1,5 +1,11 @@
 {
-  "rewrites":  [
-    {"source": "/(.*)", "destination": "/"}
+  "routes": [
+    {
+      "src": "/(.*)",
+      "headers": {
+        "Access-Control-Allow-Origin": "192.168.2.108"
+      },
+      "dest": "/index.html"
+    }
   ]
 }
