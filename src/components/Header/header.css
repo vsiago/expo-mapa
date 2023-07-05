@@ -67,10 +67,9 @@ header .tourVirtual {
   white-space: nowrap;
   overflow-x: scroll;
   pointer-events: auto;
-  padding-left: 280px;
+  padding-left: 560px;
   padding-top: 14px;
   overflow-y: hidden;
-  
 }
 
 /* Btn Avaliacao */
@@ -82,15 +81,22 @@ header .tourVirtual {
   pointer-events: auto;
 }
 
+.header .navbar li img {
+  color: white;
+  width: 27px;
+  margin-right: 2px;
+}
 
 .header .navbar li a {
-  display: block;
+  display: flex;
   padding: 1rem .8rem;
   font-size: 1.2rem;
   cursor: pointer;
   border-radius: 6px;
   transition: .3;
   pointer-events: auto;
+  justify-content: center;
+  align-items: center;
 }
 
 .header .navbar li a:active {

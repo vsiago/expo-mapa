@@ -100,7 +100,7 @@ export default function Header({ atualizarEstadoFilho }) {
 
   return (
     <header onClick={toggleMenu} className={`headerMain ${navbarShow ? 'headerMainBGShow' : ''}`}>
-      <p className={`tourVirtual ${navbarShow ? 'tourVirtualPDelay' : ''}`}>{navbarShow ? '< arraste para o lado >' : 'explore locais'}</p>
+      <p className={`tourVirtual ${navbarShow ? 'tourVirtualPDelay' : ''}`}>{navbarShow ? '< arraste para os lados >' : 'explore locais'}</p>
       <nav className={`header ${isOpen ? 'open' : ''}`}>
         <Link to="./">
           <img
@@ -111,37 +111,70 @@ export default function Header({ atualizarEstadoFilho }) {
         </Link>
         <ul className={`navbar ${navbarShow ? 'navbarShow' : ''}`}>
           <li>
-            <a id="palco-laia" data-button="palco-laia" onClick={handleButtonClick}>Palco Laiá</a>
+            <a id="palco-laia" data-button="palco-laia" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Palco Laiá</p>
+            </a>
           </li>
           <li>
-            <a id="palco-quiva" data-button="palco-quiva" onClick={handleButtonClick}>Palco Quiva</a>
+            <a id="palco-quiva" data-button="palco-quiva" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Palco Quiva</p>
+            </a>
           </li>
           <li>
-            <a data-button="parque" onClick={handleButtonClick}>Parque</a>
+            <a data-button="parque" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Parque</p>
+            </a>
           </li>
           <li>
-            <a data-button="rodeio" onClick={handleButtonClick}>Rodeio</a>
+            <a data-button="rodeio" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Rodeio</p>
+            </a>
           </li>
           <li>
-            <a id="praca-alimentacao" data-button="praca-alimentacao" onClick={handleButtonClick}>Praca de Alimentacao</a>
+            <a id="praca-alimentacao" data-button="praca-alimentacao" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Praca de Alimentacao</p>
+            </a>
           </li>
           <li>
-            <a data-button="camarote" onClick={handleButtonClick}>Camarote</a>
+            <a data-button="camarote" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Camarote</p>
+            </a>
           </li>
           <li>
-            <a data-button="forro" onClick={handleButtonClick}>Forró</a>
+            <a data-button="forro" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Forró</p>
+            </a>
           </li>
           <li>
-            <a data-button="educacao" onClick={handleButtonClick}>Educação</a>
+            <a data-button="educacao" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Educação</p>
+            </a>
           </li>
           <li>
-            <a data-button="cultura" onClick={handleButtonClick}>Cultura</a>
+            <a data-button="cultura" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Cultura</p>  
+            </a>
           </li>
           <li>
-            <a data-button="fazendinha" onClick={handleButtonClick}>Fazendinha</a>
+            <a data-button="fazendinha" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Fazendinha</p>  
+            </a>
           </li>
           <li>
-            <a data-button="game" onClick={handleButtonClick}>Game</a>
+            <a data-button="game" onClick={handleButtonClick}>
+              <img src="./img/icon-location1.svg" alt="" />
+              <p>Game</p>  
+            </a>
           </li>
         </ul>
         <Link to="/avaliacao">

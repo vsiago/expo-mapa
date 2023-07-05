@@ -40,14 +40,15 @@ export default function Avaliacao() {
       setExibirAlertas(true);
     } else {
       setExibirAlertas(false);
-      setEnviarAvaliacao(true);
-      console.log(avaliacaoResultados);
+
       const db = firebase.firestore();
       db.collection("avaliacoes")
         .add(avaliacaoResultados)
         .then(() => {
           setEnviarAvaliacao(true);
           console.log("Resultados da avaliação salvos no Firestore");
+          setEnviarAvaliacao(true);
+
         })
         .catch((error) => {
           console.error("Erro ao salvar resultados da avaliação:", error);
@@ -71,6 +72,9 @@ export default function Avaliacao() {
           </Link>
         ) : (
           <>
+          <Link to="/home">
+            <img className="btnVoltar" src="./img/btnVoltar.png" alt="" />
+          </Link>
             <h1 className="titleOpiniao">Dê sua opinião sobre a Expo</h1>
             <p className="subTitleOpniao">Sua resposta é muito importante para nós</p>
           </>
@@ -78,7 +82,10 @@ export default function Avaliacao() {
       </header>
       <section>
         {enviarAvaliacao ? (
-          <p className="mensagemAgradecimento">Obrigado pela sua avaliação!</p>
+          <div className='containerAgredecimento'>
+            <img src="./img/grafico-agradecimento.png" alt="" />
+            <p className="mensagemAgradecimento">Obrigado pela sua avaliação!</p>
+          </div>
         ) : (
           <div className="cardsAvaliacao">
             <div className="cardSeguraca card">
