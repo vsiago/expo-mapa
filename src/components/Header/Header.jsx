@@ -29,6 +29,7 @@ export default function Header({ atualizarEstadoFilho }) {
   };
 
   const handleButtonClick = (event) => {
+    event.stopPropagation();
     const button = event.target.dataset.button;
     setSelectedButton(button);
     // audio.play();
@@ -57,7 +58,6 @@ export default function Header({ atualizarEstadoFilho }) {
         setTimeout(() => {
           document.querySelector('img[src="' + '/img/Rodeio/rodeio-icon.png' + '"]').click();
           console.log('rodeio');
-
         }, 500);
         break;
       case 'praca-alimentacao':
@@ -96,7 +96,7 @@ export default function Header({ atualizarEstadoFilho }) {
         }, 500);
         break;
       default:
-        // Lógica padrão quando nenhum botão está selecionado
+        console.log('nenhum botão selecionado');
         break;
     }
   }, [selectedButton, setSelectedButton]);
@@ -114,13 +114,13 @@ export default function Header({ atualizarEstadoFilho }) {
         </Link>
         <ul className={`navbar ${navbarShow ? 'navbarShow' : ''}`}>
           <li>
-            <a id="palco-laia" data-button="palco-laia" onClick={handleButtonClick}>
+            <a data-button="palco-laia" onClick={handleButtonClick}>
               <img src="./img/icon-location1.svg" alt="" />
               <p>Palco Laiá</p>
             </a>
           </li>
           <li>
-            <a id="palco-quiva" data-button="palco-quiva" onClick={handleButtonClick}>
+            <a data-button="palco-quiva" onClick={handleButtonClick}>
               <img src="./img/icon-location1.svg" alt="" />
               <p>Palco Quiva</p>
             </a>
