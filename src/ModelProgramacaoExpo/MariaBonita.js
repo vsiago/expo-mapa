@@ -1,7 +1,7 @@
 const MariaBonita = {
   name: 'Maria Bonita',
   description: 'A tenda de forró oficial da Expo 2023.',
-  URLImg: '../img/PalcoLaia/palco-laia.png',
+  URLImg: '../img/MariaBonita/maria-thumb.png',
   atracoes: [
     // {
     //   name: 'Leo Santana',

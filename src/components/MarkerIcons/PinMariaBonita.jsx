@@ -60,13 +60,13 @@ const PinMariaBonita = ({ latitude, longitude }) => {
     } else {
       return (
         <header className='fade-in'>
-          <div className='img-container'>
+          <div id='img-container' className='img-container'>
             <img src={PalcoLaia.URLImg} alt='' />
           </div>
-          <div className='containerIntro'>
+          {/* <div className='containerIntro'>
             <h1>{PalcoLaia.name}</h1>
             <p>{PalcoLaia.description}</p>
-          </div>
+          </div> */}
         </header>
       );
     }
@@ -78,7 +78,7 @@ const PinMariaBonita = ({ latitude, longitude }) => {
         <main id='bgMariaBonita'>
           <div className='btnHomePrgramacao' onClick={handleClickBtnNull}></div>
           {renderAtracao()}
-          <footer id='footerMariaBonita'>
+          {/* <footer id='footerMariaBonita'>
             <nav>
               <h3>TODAS AS ATRAÇÕES:</h3>
               <ul className='navAtracoes'>
@@ -89,7 +89,7 @@ const PinMariaBonita = ({ latitude, longitude }) => {
                 ))}
               </ul>
             </nav>
-          </footer>
+          </footer> */}
         </main>
       </Popup>
     </Marker>
