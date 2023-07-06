@@ -22,7 +22,7 @@ const Map = () => {
     [180, 360],
   ];
   const minZoom = 1.6;
-  const maxZoom = 4;
+  const maxZoom = 1.6;
   const initialZoom = minZoom;
   const centerLatitude = 0;
   const centerLongitude = 0;
