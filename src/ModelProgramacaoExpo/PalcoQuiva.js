@@ -1,6 +1,6 @@
 const PalcoQuiva = {
   name: 'Palco Quiva',
-  description: 'Palco principal da Expo Itaguaí completo de celebridades nacionais. As melhores atrações do Brasil já passaram por aqui.',
+  description: '',
   URLImg: '../img/PalcoLaia/palco-laia.png',
   atracoes: [
     {
