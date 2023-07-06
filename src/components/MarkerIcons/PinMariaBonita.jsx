@@ -60,7 +60,7 @@ const PinMariaBonita = ({ latitude, longitude }) => {
     } else {
       return (
         <header className='fade-in'>
-          <div id='img-container' className='img-container'>
+          <div id='#img-container-maria' className='img-container'>
             <img src={PalcoLaia.URLImg} alt='' />
           </div>
           {/* <div className='containerIntro'>

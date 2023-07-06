@@ -63,10 +63,10 @@ const PinArenaGame = ({ latitude, longitude }) => {
           <div id='gameintro' className='img-container'>
             <img src={PalcoLaia.URLImg} alt='' />
           </div>
-          <div id='containerIntroo' className='containerIntro'>
+          {/* <div id='containerIntroo' className='containerIntro'>
             <h1>{PalcoLaia.name}</h1>
             <p>{PalcoLaia.description}</p>
-          </div>
+          </div> */}
         </header>
       );
     }
