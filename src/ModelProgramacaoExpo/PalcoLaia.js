@@ -1,6 +1,6 @@
 const PalcoLaia = {
   name: 'Palco Laiá',
-  description: 'Palco principal da Expo Itaguaí completo de celebridades nacionais. As melhores atrações do Brasil já passaram por aqui.',
+  description: 'Palco principal da Expo Itaguaí 2023. Curta as principais celebridades do Brasil.',
   URLImg: '../img/PalcoLaia/palco-laia.png',
   atracoes: [
     {
