@@ -88,13 +88,14 @@ body {
 }
 
 .leaflet-popup-content main header .img-container img {
-  width: 80%;
+  width: 120%;
 }
 
 .leaflet-popup-content main header .containerIntro {
-  width: 50%;
+  width: 60%;
   /* border: solid 1px rgb(255, 157, 0); */
-  padding: 3rem 1rem;
+  padding: 1rem;
+  padding-top: 50px;
   font-family: Poppins;
 }
 

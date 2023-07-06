@@ -34,7 +34,7 @@ const PinFazendinha = ({ latitude, longitude }) => {
     setItemSelecionado(item);
     const newTimeoutRef = setTimeout(() => {
       handleClickBtnNull();
-    }, 8000);
+    }, 15000);
     setTimeoutRef(newTimeoutRef); // Armazena a referência do novo setTimeout
   };
 
@@ -46,25 +46,77 @@ const PinFazendinha = ({ latitude, longitude }) => {
 
   const renderAtracao = () => {
     if (itemSelecionado) {
+
       return (
         <header className='fade-in'>
-          <div className='img-container'>
+          <div id='img-container'>
             <img src={itemSelecionado.URLImg} alt='' />
           </div>
-          <div className='containerIntro'>
-            <h1>{itemSelecionado.name}</h1>
-            <p>{itemSelecionado.description}</p>
+          <div id='containerIntro'>
+            <h1 style={{textAlign: 'center'}}>{itemSelecionado.name}</h1>
+            <table style={{ borderCollapse: 'collapse', marginTop: '-5px'}}>
+                <thead>
+                  <tr style={{height: '10px', background: 'rgba(0,0,0,.5)'}}>
+                    
+                        <th style={{color: 'yellow', fontSize: '1.2rem', padding: '10px'}}>{itemSelecionado.hora1}</th>
+                        <th style={{color: 'yellow', fontSize: '1.2rem', padding: '10px'}}>{itemSelecionado.hora2}</th>
+                        <th style={{color: 'yellow', fontSize: '1.2rem', padding: '10px'}}>{itemSelecionado.hora3}</th>
+                        <th style={{color: 'yellow', fontSize: '1.2rem', padding: '10px'}}>{itemSelecionado.hora4}</th>
+                        <th style={{color: 'yellow', fontSize: '1.2rem', padding: '10px'}}>{itemSelecionado.hora5}</th>
+                    </tr>
+                </thead>
+                <tbody style={{height: '200px'}}>
+                <tr style={{height: '44px', background: 'rgba(0,0,0,.1)'}}>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at1}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at2}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at3}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at4}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at21}</td>
+                    </tr>
+                    <tr style={{height: '44px', background: 'rgba(0,0,0,.2)', marginBottom: '4px'}}>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at5}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at6}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at7}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at8}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at22}</td>
+                    </tr>
+                    <tr style={{height: '44px', background: 'rgba(0,0,0,.1)'}}>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at9}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at10}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at11}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at12}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at23}</td>
+
+                    </tr>
+                    <tr style={{height: '44px', background: 'rgba(0,0,0,.2)', marginBottom: '4px'}}>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at13}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at14}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at15}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at16}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at24}</td>
+                    </tr>
+                    <tr style={{height: '50px', background: 'rgba(0,0,0,.1)', marginBottom: '4px'}}>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at17}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at18}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at19}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at20}</td>
+                      <td style={{paddingLeft: '10px'}}>{itemSelecionado.at25}</td>
+                    </tr>
+                </tbody>
+            </table>    
           </div>
         </header>
       );
     } else {
       return (
         <header className='fade-in'>
-          <div className='img-container'>
+          <div style={{paddingLeft: '60px', height: '110%'}} className='img-container'>
             <img src={PalcoLaia.URLImg} alt='' />
           </div>
           <div className='containerIntro'>
-            <h1>{PalcoLaia.name}</h1>
+            <h1 id='tituloPrincipal'>{PalcoLaia.name}</h1>
+            <span id='abertura'>ABERTURA</span>
+            <p style={{fontSize: 32}}>11h da manhã</p>
             <p>{PalcoLaia.description}</p>
           </div>
         </header>
@@ -84,7 +136,7 @@ const PinFazendinha = ({ latitude, longitude }) => {
               <ul className='navAtracoes'>
                 {PalcoLaia.atracoes.map((atracao) => (
                   <li onClick={() => handleItemClick(atracao)} key={atracao.name}>
-                    <img src={atracao.icon} alt="" />
+                    <p id='data'>{atracao.data}</p>
                   </li>
                 ))}
               </ul>

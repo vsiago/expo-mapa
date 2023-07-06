@@ -61,13 +61,13 @@ const PinRodeio = ({ latitude, longitude }) => {
       return (
         <header className='fade-in'>
           <div className='img-container'>
-          <video id='videoRodeip' width="640" height="360" playsinline loop muted autoPlay>
+          <video id='videoRodeip' width="640" height="360" playsinline loop autoPlay>
         <source src="https://tonynascimento.com.br/wp-content/themes/tony-nascimento/img/video.mp4" type="video/mp4" />
         Seu navegador não suporta o elemento de vídeo.
       </video>
           </div>
           <div className='containerIntro'>
-            <h1 >Rodeio</h1>
+            {/* <h1 >Rodeio</h1> */}
             <img  src="https://tonynascimento.com.br/wp-content/themes/tony-nascimento/img/logo.png" alt="" />
             {/* <p>{PalcoLaia.description}</p> */}
           </div>
@@ -83,7 +83,7 @@ const PinRodeio = ({ latitude, longitude }) => {
 
           <div className='btnHomePrgramacao' onClick={handleClickBtnNull}></div>
           {renderAtracao()}
-          <footer id='footerRodeio'>
+          {/* <footer id='footerRodeio'>
             <nav>
               <h3>TODAS AS ATRAÇÕES:</h3>
               <ul className='navAtracoes'>
@@ -94,7 +94,7 @@ const PinRodeio = ({ latitude, longitude }) => {
                 ))}
               </ul>
             </nav>
-          </footer>
+          </footer> */}
         </main>
       </Popup>
     </Marker>

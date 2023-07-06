@@ -60,10 +60,10 @@ const PinArenaGame = ({ latitude, longitude }) => {
     } else {
       return (
         <header className='fade-in'>
-          <div className='img-container'>
+          <div id='gameintro' className='img-container'>
             <img src={PalcoLaia.URLImg} alt='' />
           </div>
-          <div className='containerIntro'>
+          <div id='containerIntroo' className='containerIntro'>
             <h1>{PalcoLaia.name}</h1>
             <p>{PalcoLaia.description}</p>
           </div>
@@ -78,7 +78,7 @@ const PinArenaGame = ({ latitude, longitude }) => {
         <main id='bgArenaGame'>
           <div className='btnHomePrgramacao' onClick={handleClickBtnNull}></div>
           {renderAtracao()}
-          <footer id='footerArenaGame'>
+          {/* <footer id='footerArenaGame'>
             <nav>
               <h3>TODAS AS ATRAÇÕES:</h3>
               <ul className='navAtracoes'>
@@ -89,7 +89,7 @@ const PinArenaGame = ({ latitude, longitude }) => {
                 ))}
               </ul>
             </nav>
-          </footer>
+          </footer> */}
         </main>
       </Popup>
     </Marker>

@@ -6,3 +6,65 @@
 #footerFazendinha {
   background: linear-gradient(90deg, rgba(88, 80, 23, 0) 0%, rgba(80, 73, 22, 0.5) 25%, rgb(63, 60, 17) 50%, rgba(76, 78, 22, 0.5) 75%, rgba(75, 69, 24, 0) 100%);
 }
+p {
+  margin: 0!important;
+  padding: 0!important;
+}
+h2 {
+  font-family: sans-serif;
+}
+#tituloPrincipal {
+  margin-bottom: 10px;
+}
+
+#abertura {
+  font-weight: bold;
+  font-family: sans-serif;
+  letter-spacing: 3px;
+  color: yellow;
+}
+
+#data {
+  font-size: 5rem;
+  color: #000;
+  opacity: .7;
+  padding-top: 20px!important;
+}
+
+#data::before {
+  content: 'DIA';
+  font-size: 20px;
+  font-weight: 600;
+  position: absolute;
+  letter-spacing: 5px;
+  top: -48px;
+}
+
+#img-container {
+  display: none;
+}
+
+#containerIntro {
+  padding: 0px;
+}
+
+#containerIntro h1 {
+  font-size: 3rem;
+  font-weight: 500;
+  letter-spacing: 15px;
+  margin-top: -5px;
+  margin-bottom: 7px;
+}
+
+#dataTitle {
+  font-size: 1.5rem;
+}
+
+#subtitulo {
+  margin-bottom: 5px;
+}
+
+#texto {
+  font-size: 1.1rem;
+  visibility: .8;
+}

@@ -74,7 +74,7 @@ const PinPracaAlimentacao = ({ latitude, longitude }) => {
 
   return (
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
-      <Popup autoPan={true}>
+      {/* <Popup autoPan={true}>
         <main id='bgAlimentacao'>
           <div className='btnHomePrgramacao' onClick={handleClickBtnNull}></div>
           {renderAtracao()}
@@ -91,7 +91,7 @@ const PinPracaAlimentacao = ({ latitude, longitude }) => {
             </nav>
           </footer>
         </main>
-      </Popup>
+      </Popup> */}
     </Marker>
   );
 };

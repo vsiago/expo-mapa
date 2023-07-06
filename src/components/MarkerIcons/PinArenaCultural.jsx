@@ -74,7 +74,7 @@ const PinArenaCultural = ({ latitude, longitude }) => {
 
   return (
     <Marker position={coordPinPalcoLaia} icon={customIconPalcoLaia}>
-      <Popup autoPan={true}>
+      {/* <Popup autoPan={true}>
         <main id='bgArenaCultural'>
           <div className='btnHomePrgramacao' onClick={handleClickBtnNull}></div>
           {renderAtracao()}
@@ -91,7 +91,7 @@ const PinArenaCultural = ({ latitude, longitude }) => {
             </nav>
           </footer>
         </main>
-      </Popup>
+      </Popup> */}
     </Marker>
   );
 };
