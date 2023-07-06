@@ -16,7 +16,7 @@ const PinPalcoLaia = ({ latitude, longitude }) => {
   const customIconPalcoLaia = icon({
     iconUrl: pinPalcoLaiaIcon,
     iconSize: [77, 114],
-    popupAnchor: [200, 170]
+    popupAnchor: [200, 190]
   });
 
   const coordPinPalcoLaia = [latitude, longitude];

@@ -17,7 +17,7 @@ const PinCamaroteGreyGoose = ({ latitude, longitude }) => {
   const customIconPalcoLaia = icon({
     iconUrl: pinPalcoLaiaIcon,
     iconSize: [77, 114],
-    popupAnchor: [200, 270]
+    popupAnchor: [200, 180]
   });
 
   const coordPinPalcoLaia = [latitude, longitude];
