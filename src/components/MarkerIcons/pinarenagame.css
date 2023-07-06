@@ -16,6 +16,10 @@
   padding: 0;
 }
 
+#gameintro img {
+  width: 85%;
+}
+
 #containerIntroo {
   width: 60%;
   padding: 0;
